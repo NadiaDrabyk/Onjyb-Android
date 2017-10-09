@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res/android"
+    custom:orientation="vertical"
+    custom:id="@+id/llAddService"
+    custom:background="@android:color/white"
+    custom:layout_width="match_parent"
+    custom:layout_height="match_parent"
+    custom:layout_marginBottom="2dp">
+    <LinearLayout
+        custom:gravity="center"
+        custom:orientation="horizontal"
+        custom:id="@+id/llViewHeader"
+        custom:background="@color/Dark_blue"
+        custom:layout_width="match_parent"
+        custom:layout_height="wrap_content">
+        <com.onjyb.customview.ETechTextView
+            custom:textSize="@dimen/textsize_large"
+            custom:textColor="@color/white"
+            custom:gravity="center"
+            custom:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+            custom:id="@+id/txtTitledialog"
+            custom:layout_width="match_parent"
+            custom:layout_height="wrap_content" custom:layout_marginLeft="14dp"
+            custom:layout_marginRight="15dp" custom:text="aaaa" custom:layout_weight="1.0"/>
+        <ImageView custom:id="@+id/lblcloseImg" custom:padding="5dp"
+            custom:layout_width="30dp" custom:layout_height="30dp"
+            custom:layout_marginLeft="5dp" custom:src="@drawable/close"
+            custom:layout_below="@+id/llViewHeader" custom:layout_alignParentRight="true" />
+    </LinearLayout>
+    <ListView custom:id="@+id/lsovertimelist"
+        custom:layout_width="match_parent"
+        custom:layout_height="wrap_content"
+        custom:layout_below="@+id/llViewHeader" />
+</RelativeLayout>

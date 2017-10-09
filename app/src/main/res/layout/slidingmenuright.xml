@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res/android"
+    custom:orientation="vertical"
+    custom:background="@color/White"
+    custom:visibility="visible"
+    custom:layout_width="match_parent"
+    custom:layout_height="match_parent"
+    custom:layout_margin="5dp">
+    <LinearLayout
+        custom:background="@color/Dark_blue"
+        custom:paddingLeft="15dp"
+        custom:paddingRight="15dp"
+        custom:layout_width="match_parent"
+        custom:layout_height="48dp">
+        <com.onjyb.customview.ETechButton
+            custom:gravity="center"
+            custom:layout_gravity="center_vertical"
+            custom:id="@+id/btncancel" custom:visibility="gone" custom:text="@string/btn_calcel"
+            custom:singleLine="true" custom:layout_weight="1.0" style="@style/btn_taggal_white"
+            custom:layout_height="35dp"/>
+        <com.onjyb.customview.ETechButton
+            custom:gravity="center"
+            custom:layout_gravity="center_vertical"
+            custom:id="@+id/btnclear" custom:layout_marginLeft="10dp"
+            custom:text="@string/btn_clear" custom:singleLine="true"
+            custom:layout_weight="1.0" style="@style/btn_taggal_white"
+            custom:layout_height="35dp"/>
+        <com.onjyb.customview.ETechButton
+            custom:gravity="center"
+            custom:layout_gravity="center_vertical"
+            custom:id="@+id/btnsearch" custom:layout_marginLeft="10dp"
+            custom:text="@string/btn_search" custom:singleLine="true"
+            custom:layout_weight="1.0" style="@style/btn_taggal_white"
+            custom:layout_height="35dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        custom:layout_width="match_parent" custom:layout_height="match_parent">
+        <LinearLayout custom:orientation="vertical"
+            custom:layout_width="match_parent" custom:layout_height="wrap_content"
+            custom:layout_marginLeft="20dp" custom:layout_marginRight="20dp">
+
+            <com.onjyb.customview.ETechTextView custom:layout_marginTop="@dimen/view_margin"
+                custom:text="@string/select_project" style="@style/tv_comman_gray_to_blue" />
+            <com.onjyb.customview.EtechEditAutoCompleteTextRobotoRegular
+                custom:id="@+id/auto_proname"
+                custom:hint="@string/txt_select_project"
+                style="@style/drop_down" custom:layout_height="40dp"/>
+            <com.onjyb.customview.ETechTextView
+                custom:id="@+id/txtLeavetype"
+                custom:visibility="gone"
+                custom:layout_marginTop="@dimen/view_margin"
+                custom:text="@string/select_leaveType"
+                style="@style/tv_comman_gray_to_blue" />
+            <RelativeLayout
+                custom:id="@+id/rel_auto_srch1"
+                custom:background="@drawable/btn_rount_with_border"
+                custom:visibility="gone"
+                custom:layout_width="match_parent"
+                custom:layout_height="@dimen/UNKNOWN_DATA_0x2301">
+
+                <ImageView custom:id="@+id/imageView1"
+                    custom:focusable="false"
+                    custom:layout_width="wrap_content"
+                    custom:layout_height="wrap_content"
+                    custom:src="@drawable/ic_down_arrow"
+                    custom:layout_alignParentRight="true"
+                    custom:layout_centerVertical="true" />
+
+                <Spinner custom:id="@+id/auto_leaveType"
+                    custom:background="#00000000" custom:paddingLeft="1dp" custom:paddingRight="1dp"
+                    custom:layout_width="match_parent" custom:layout_height="@dimen/UNKNOWN_DATA_0x2301"
+                    custom:drawSelectorOnTop="false" custom:minHeight="40dp"
+                    custom:layout_alignParentLeft="true" custom:layout_centerVertical="true"
+                    custom:dropDownWidth="match_parent" custom:dropDownVerticalOffset="35dp"
+                    custom:spinnerMode="dropdown" />
+            </RelativeLayout>
+
+            <com.onjyb.customview.ETechTextView
+                custom:id="@+id/txtStatusName" custom:visibility="gone"
+                custom:layout_marginTop="@dimen/view_margin" custom:text="@string/select_status"
+                style="@style/tv_comman_gray_to_blue" />
+
+            <RelativeLayout
+                custom:id="@+id/rel_auto_status" custom:background="@drawable/btn_rount_with_border"
+                custom:visibility="gone" custom:layout_width="match_parent"
+                custom:layout_height="@dimen/UNKNOWN_DATA_0x2301">
+
+                <ImageView
+                    custom:id="@+id/imageViewstatus"
+                    custom:focusable="false"
+                    custom:layout_width="wrap_content" custom:layout_height="wrap_content"
+                    custom:src="@drawable/ic_down_arrow" custom:layout_alignParentRight="true"
+                    custom:layout_centerVertical="true" />
+
+                <Spinner custom:id="@+id/auto_Status" custom:background="#00000000"
+                    custom:paddingLeft="0dp" custom:layout_width="match_parent" custom:layout_height="@dimen/UNKNOWN_DATA_0x2301"
+                    custom:drawSelectorOnTop="false" custom:minHeight="45dp" custom:layout_alignParentLeft="true"
+                    custom:layout_centerVertical="true" custom:dropDownWidth="match_parent" custom:dropDownVerticalOffset="35dp"
+                    custom:spinnerMode="dropdown" />
+            </RelativeLayout>
+
+            <com.onjyb.customview.ETechTextView
+                custom:id="@+id/txtemployee" custom:visibility="gone"
+                custom:layout_marginTop="@dimen/view_margin"
+                custom:text="@string/select_employee" style="@style/tv_comman_gray_to_blue" />
+
+            <AutoCompleteTextView
+                custom:id="@+id/auto_employee" custom:visibility="gone"
+                custom:hint="@string/select_employee_hint" style="@style/drop_down" />
+
+            <com.onjyb.customview.ETechTextView
+                custom:id="@+id/tvService" custom:visibility="gone"
+                custom:layout_marginTop="@dimen/view_margin" custom:text="@string/select_services" style="@style/tv_comman_gray_to_blue" />
+
+            <AutoCompleteTextView
+                custom:id="@+id/auto_service" custom:visibility="gone"
+                custom:hint="@string/hint_select_service" style="@style/drop_down" />
+
+            <com.onjyb.customview.ETechTextView
+                custom:id="@+id/tvBranch" custom:layout_marginTop="@dimen/view_margin"
+                custom:text="@string/select_branch" style="@style/tv_comman_gray_to_blue" />
+
+            <AutoCompleteTextView
+                custom:id="@+id/auto_branch" custom:hint="@string/hint_select_branch"
+                style="@style/drop_down" custom:layout_height="40dp"/>
+
+            <com.onjyb.customview.ETechTextView
+                custom:id="@+id/tvstrtdt" custom:layout_marginTop="@dimen/view_margin"
+                custom:text="@string/start_date" style="@style/tv_comman_gray_to_blue" />
+
+            <LinearLayout custom:orientation="horizontal"
+                custom:layout_width="match_parent" custom:layout_height="wrap_content">
+
+                <com.onjyb.customview.ETechTextView
+                    custom:gravity="center" custom:id="@+id/tvstrdate"
+                    custom:background="@drawable/btn_rount_with_border" custom:paddingLeft="5dp"
+                    custom:hint="@string/start_date" custom:singleLine="true"
+                    custom:layout_weight="1.0" style="@style/tv_comman"
+                    custom:layout_height="40dp"/>
+
+                <ImageButton custom:layout_gravity="center" custom:id="@+id/imgDate"
+                    custom:background="@android:color/transparent"
+                    custom:layout_width="@dimen/UNKNOWN_DATA_0x2301" custom:layout_height="@dimen/UNKNOWN_DATA_0x2301"
+                    custom:src="@drawable/btn_calender" custom:scaleType="fitCenter"
+                    custom:onClick="selectDatetoSearch" />
+            </LinearLayout>
+
+            <com.onjyb.customview.ETechTextView
+                custom:id="@+id/tvendate"
+                custom:layout_marginTop="@dimen/view_margin" custom:text="@string/end_date" style="@style/tv_comman_gray_to_blue" />
+
+            <LinearLayout custom:orientation="horizontal"
+                custom:layout_width="match_parent" custom:layout_height="wrap_content">
+
+                <com.onjyb.customview.ETechTextView
+                    custom:gravity="center" custom:id="@+id/tvEndDt"
+                    custom:background="@drawable/btn_rount_with_border" custom:paddingLeft="5dp"
+                    custom:hint="@string/end_date" custom:singleLine="true" custom:layout_weight="1.0"
+                    style="@style/tv_comman"
+                    custom:layout_height="40dp"/>
+
+                <ImageButton custom:layout_gravity="center"
+                    custom:id="@+id/imgDate2" custom:background="@android:color/transparent"
+                    custom:layout_width="@dimen/UNKNOWN_DATA_0x2301" custom:layout_height="@dimen/UNKNOWN_DATA_0x2301"
+                    custom:src="@drawable/btn_calender" custom:scaleType="fitCenter"
+                    custom:onClick="selectDatetoSearch1" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res/android"
+    custom:id="@+id/header"
+    custom:layout_width="match_parent"
+    custom:layout_height="wrap_content">
+    <RelativeLayout
+        custom:id="@+id/headerView"
+        custom:background="@color/apps_header_color"
+        custom:layout_width="match_parent"
+        custom:layout_height="48dp">
+        <ImageView
+            custom:id="@+id/btnLeft"
+            custom:background="@color/Dark_blue"
+            custom:padding="10dp"
+            custom:layout_width="40dp"
+            custom:layout_height="40dp"
+            custom:tint="@android:color/white"
+            custom:src="@drawable/ic_drawer"
+            custom:layout_alignParentLeft="true"
+            custom:layout_centerVertical="true" />
+        <ImageView
+            custom:id="@+id/btnRight"
+            custom:background="@color/Dark_blue"
+            custom:padding="10dp"
+            custom:layout_width="40dp"
+            custom:layout_height="40dp"
+            custom:layout_marginRight="5dp"
+            custom:layout_alignParentRight="true"
+            custom:layout_centerVertical="true" />
+        <com.onjyb.customview.ETechTextView
+            custom:textSize="@dimen/textsize_large"
+            custom:textColor="@android:color/white"
+            custom:id="@+id/txtTitle"
+            custom:layout_width="wrap_content"
+            custom:layout_height="wrap_content"
+            custom:layout_marginRight="15dp"
+            custom:text="Home"
+            custom:layout_centerHorizontal="true"
+            custom:layout_centerVertical="true"/>
+        <com.onjyb.customview.ETechTextView
+            custom:textColor="@android:color/white"
+            custom:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+            custom:id="@+id/txtsubTitle"
+            custom:visibility="gone"
+            custom:layout_width="match_parent"
+            custom:layout_height="wrap_content"
+            custom:layout_marginRight="15dp"
+            custom:text="Activity" />
+        <com.onjyb.customview.ETechTextView
+            custom:textSize="@dimen/txtsize_medium_small"
+            custom:textColor="@android:color/black"
+            custom:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+            custom:id="@+id/btnregistertime"
+            custom:visibility="invisible"
+            custom:layout_width="wrap_content"
+            custom:layout_height="wrap_content"
+            custom:layout_marginTop="20dp"
+            custom:text="@string/Registertime"
+            custom:layout_toLeftOf="@+id/btnRight"
+            custom:layout_toRightOf="@+id/txtTitle" />
+    </RelativeLayout>
+    <com.onjyb.customview.ETechEditText
+        custom:id="@+id/fakeEdit"
+        custom:visibility="gone"
+        custom:layout_width="wrap_content"
+        custom:layout_height="wrap_content"
+        custom:layout_marginLeft="40dp"
+        custom:ems="10"
+        custom:layout_alignParentLeft="true" />
+
+    <ImageView
+        custom:visibility="gone"
+        custom:layout_width="match_parent"
+        custom:layout_height="40dp"
+        custom:layout_marginTop="1dp"
+        custom:layout_below="@+id/headerView" />
+</RelativeLayout>

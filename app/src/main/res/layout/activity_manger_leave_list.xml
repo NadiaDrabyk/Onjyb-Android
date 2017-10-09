@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.onjyb.customview.ETechTextView
+        android:gravity="center"
+        android:id="@+id/txtStatusofHours1" android:background="@color/light_grey"
+        android:paddingTop="15dp" android:paddingBottom="15dp"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/txt_no_data" style="@style/tv_comman_green" />
+    <com.onjyb.customview.ETechTextView
+        android:id="@+id/txtnoLvdata" android:visibility="gone"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/txt_no_data" />
+    <ListView android:id="@+id/ls_leave_man_list"
+        android:background="@drawable/login_bg_hdpi"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:divider="@color/light_grey" android:dividerHeight="1dp" />
+</LinearLayout>

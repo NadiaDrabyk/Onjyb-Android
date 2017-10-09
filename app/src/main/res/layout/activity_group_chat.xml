@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/login_bg_hdpi"
+    android:padding="5dp"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <ListView android:id="@+id/lstMessages" android:padding="2dp"
+        android:layout_width="wrap_content" android:layout_height="match_parent"
+        android:stackFromBottom="true" android:transcriptMode="normal"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp" android:choiceMode="multipleChoice"
+        android:layout_above="@+id/relSendMessage" android:layout_alignParentLeft="true" />
+    <LinearLayout android:orientation="vertical" android:id="@+id/relSendMessage"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal" android:id="@+id/relSendMessages" android:padding="5dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.onjyb.customview.ETechEditText
+                android:id="@+id/edtMeassage"
+                style="@style/edt_message"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/imgMsgSend"
+                android:padding="@dimen/five_all_side_padding"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:src="@drawable/send_blue" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

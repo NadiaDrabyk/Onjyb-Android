@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+    android:orientation="horizontal" android:padding="10dp"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.onjyb.customview.ETechTextView android:textSize="13sp"
+        android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:id="@+id/tvovertimelbl" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/txt_total_time_underline" android:layout_weight="1.0" style="@style/tv_comman" />
+    <com.onjyb.customview.ETechTextView android:textSize="12sp"
+        android:textColor="@color/green"
+        android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:id="@+id/tvovertimeData" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp" android:text="00h 00m" style="@style/tv_comman" />
+</LinearLayout>

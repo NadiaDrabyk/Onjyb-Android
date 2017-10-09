@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+    android:orientation="vertical"
+    android:id="@+id/photo_options_layout"
+    android:background="@color/light_grey"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="23dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:id="@+id/txtDiaTitle"
+        android:background="@color/Dark_blue"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Choose Photo" />
+    <Button
+        android:textColor="#ffffff"
+        android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:id="@+id/button4"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp" />
+    <Button
+        android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        style="@style/btn_style" />
+    <Button
+        android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        style="@style/btn_style" />
+    <Button
+        android:textColor="#ffffff"
+        android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:id="@+id/btnRemovePhoto"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp" />
+    <Button
+        android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Cancel"
+        style="@style/btn_style" />
+</LinearLayout>

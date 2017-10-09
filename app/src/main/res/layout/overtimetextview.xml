@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+    <TextView
+        android:id="@+id/lblrulename"
+        android:text="@string/tv_50_overtime"
+        android:layout_weight="1.0"
+        style="@style/lbl_total_time_grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:id="@+id/tvtotaltimehrsovertm1" android:text="@string/txt_initial_time_hrs" style="@style/lbl_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView android:background="@color/green" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" />
+        <TextView android:id="@+id/tvtotaltimeminsovertm1" android:text="@string/txt_initial_time_min" style="@style/lbl_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

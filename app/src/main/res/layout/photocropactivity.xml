@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/rootView"
+    android:background="@color/White"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:id="@+id/actionbar"
+        android:background="@color/Dark_blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+            android:id="@+id/textView1"
+            android:background="@color/Dark_blue"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/str_photo_edit" />
+        <LinearLayout
+            android:gravity="left"
+            android:orientation="horizontal"
+            android:id="@+id/btnbck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+                android:id="@+id/imgback"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="7dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_back_arrow" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:id="@+id/btnDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/White"
+                android:gravity="center"
+                android:id="@+id/txtDone"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/str_done" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

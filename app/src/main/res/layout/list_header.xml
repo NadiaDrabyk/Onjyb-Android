@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:app="http://schemas.android.com/apk/res/android"
+    app:layout_width="match_parent"
+    app:layout_height="match_parent">
+
+    <LinearLayout app:orientation="vertical"
+        app:background="@color/White"
+        app:layout_width="match_parent" app:layout_height="match_parent">
+
+        <com.onjyb.customview.ETechTextView
+            app:textSize="18sp"
+            app:gravity="center"
+            app:id="@+id/tvtotalhrs"
+            app:visibility="gone"
+            app:layout_marginTop="@dimen/view_margin" app:text="@string/project_info" style="@style/tv_comman" />
+
+        <LinearLayout
+            app:orientation="horizontal"
+            app:background="@color/light_grey"
+            app:padding="15dp" app:paddingLeft="15dp" app:paddingRight="15dp"
+            app:layout_width="match_parent" app:layout_height="wrap_content"
+            app:layout_marginTop="0dp">
+
+            <com.onjyb.customview.ETechTextView
+                app:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+                app:id="@+id/tvproject"
+                app:paddingRight="15dp"
+                app:layout_width="wrap_content"
+                app:text="@string/txt_select_project"
+                style="@style/tv_comman_large_font" />
+            <com.onjyb.customview.EtechEditAutoCompleteTextRobotoRegular
+                app:id="@+id/atvproject_home"
+                app:layout_width="match_parent"
+                app:hint="@string/txt_select_project"
+                app:layout_weight="1.0"
+                app:dropDownWidth="match_parent" style="@style/drop_down" />
+        </LinearLayout>
+
+        <com.onjyb.customview.ETechTextView
+            app:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+            app:id="@+id/tvnoProjectAvailable"
+            app:visibility="gone"
+            app:layout_width="match_parent" app:layout_height="match_parent"
+            app:text="@string/txt_noproject_available" style="@style/tv_comman" />
+
+        <android.support.v4.view.ViewPager
+            app:id="@+id/myviewpager"
+            app:layout_width="match_parent" app:layout_height="180dp"
+            app:layout_marginTop="@dimen/view_margin" />
+        <com.viewpagerindicator.CirclePageIndicator
+            app:id="@+id/indicator" app:background="@android:color/transparent"
+            app:padding="10dp"
+            app:layout_width="match_parent"
+            app:layout_height="wrap_content"
+            app:fillColor="@color/Dark_blue" />
+    </LinearLayout>
+</FrameLayout>

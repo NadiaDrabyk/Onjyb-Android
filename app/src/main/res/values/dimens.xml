@@ -1,0 +1,62 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--
+         Per the design guidelines, navigation drawers should be between 240dp and 320dp:
+         https://developer.android.com/design/patterns/navigation-drawer.html
+    -->
+    <dimen name="navigation_drawer_width">300dp</dimen>
+
+    <!--beginNadia-->
+    <!-- font -->
+    <dimen name="font_level_0">10.sp</dimen>
+    <dimen name="font_level_0_5">11.sp</dimen>
+    <dimen name="font_level_1">12.0sp</dimen>
+    <dimen name="font_level_2">14.0sp</dimen>
+    <dimen name="font_level_3">16.0sp</dimen>
+    <dimen name="font_level_4">17.0sp</dimen>
+    <dimen name="font_level_5">18.0sp</dimen>          <!-- title_bar_text_size,  -->
+    <dimen name="font_level_6">20.0sp</dimen>
+    <dimen name="font_level_7">22.0sp</dimen>
+    <dimen name="font_level_8">27.0sp</dimen>
+
+    <!--endNadia-->
+    <dimen name="view_margin_tendp">10dp</dimen>
+    <dimen name="view_margin">15dp</dimen>
+    <dimen name="fiften_space">15dp</dimen>
+    <dimen name="one_half_border_dim">1.5dp</dimen>
+    <dimen name="ten_all_side_padding">10dp</dimen>
+    <dimen name="one_twenty">125dp</dimen>
+    <dimen name="three_space">5dp</dimen>
+    <dimen name="twelve_dp">12dp</dimen>
+    <dimen name="one_half_dpi">1.5dp</dimen>
+    <dimen name="five_all_side_padding">5dp</dimen>
+    <dimen name="one_fifty">150dp</dimen>
+
+    <dimen name="textsize_large">23sp</dimen>
+    <dimen name="txtsize_medium_small">14sp</dimen>
+    <dimen name="textsize_medium_large">18sp</dimen>
+
+    <!--Navigation Drawer Width-->
+    <dimen name="UNKNOWN_DATA_0xf001">300dp</dimen>
+
+    <!--Skip, Update button height-->
+    <dimen name="UNKNOWN_DATA_0x3201">40dp</dimen>
+
+    <dimen name="UNKNOWN_DATA_0x2301">40dp</dimen>
+    <dimen name="UNKNOWN_DATA_0x2801">40dp</dimen>
+    <dimen name="UNKNOWN_DATA_0x101">1dp</dimen>
+    <dimen name="UNKNOWN_DATA_0x1e01">40dp</dimen>
+    <dimen name="UNKNOWN_DATA_0x6e01">140dp</dimen>
+    <dimen name="UNKNOWN_DATA_0x5001">80dp</dimen>
+    <dimen name="UNKNOWN_DATA_0x4b01">60dp</dimen>
+    <dimen name="UNKNOWN_DATA_0xc801">150dp</dimen>
+    <dimen name="UNKNOWN_DATA_0x6401">90dp</dimen>
+
+
+
+
+</resources>

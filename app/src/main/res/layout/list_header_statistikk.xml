@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res/android"
+    app:layout_width="match_parent"
+    app:layout_height="match_parent">
+    <LinearLayout app:orientation="vertical"
+        app:background="@color/White" app:layout_width="match_parent" app:layout_height="match_parent">
+        <com.onjyb.customview.ETechTextView app:textSize="18sp"
+            app:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+            app:id="@+id/tvtotalhrs" app:visibility="gone" app:layout_width="match_parent"
+            app:layout_height="wrap_content" app:layout_marginTop="@dimen/view_margin" app:text="@string/project_info" style="@style/tv_comman" />
+        <LinearLayout app:orientation="horizontal" app:background="@color/White" app:paddingLeft="15dp" app:paddingTop="25dp" app:paddingRight="15dp" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_marginTop="0dp">
+            <com.onjyb.customview.ETechTextView app:gravity="top|bottom|center_vertical|fill_vertical|center|fill" app:id="@+id/tvproject" app:paddingRight="15dp" app:layout_width="wrap_content" app:text="@string/select_project" style="@style/tv_comman_large_font" />
+            <com.onjyb.customview.EtechEditAutoCompleteTextRobotoRegular app:id="@+id/atvproject_statistikk"
+                app:layout_width="wrap_content" app:hint="@string/all" app:layout_weight="1.0" app:dropDownWidth="match_parent" style="@style/drop_down" />
+        </LinearLayout>
+        <LinearLayout app:orientation="horizontal" app:padding="15dp"
+            app:layout_width="match_parent" app:layout_height="wrap_content">
+            <com.onjyb.customview.ETechTextView app:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+                app:layout_width="wrap_content" app:layout_height="match_parent" app:layout_marginRight="20dp"
+                app:text="@string/txt_date" style="@style/tv_comman_large_font" />
+            <com.onjyb.customview.ETechEditText app:id="@+id/edtstrtdtstk"
+                app:background="@drawable/btn_rount_with_border"
+                app:paddingLeft="5dp" app:layout_marginRight="5dp"
+                app:hint="@string/start_date" app:ems="5" app:editable="false"
+                app:layout_weight="1.0" app:onClick="selectDatestatistikk"
+                style="@style/common_edittext" />
+            <ImageButton app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                app:id="@+id/imgvstart" app:background="@android:color/transparent"
+                app:visibility="gone"
+                app:layout_width="@dimen/UNKNOWN_DATA_0x2301" app:layout_height="@dimen/UNKNOWN_DATA_0x2301" app:layout_marginLeft="5dp" app:layout_marginRight="5dp" app:src="@drawable/calendar_grey" app:scaleType="fitCenter" app:onClick="selectDatestatistikk" />
+            <com.onjyb.customview.ETechTextView
+                app:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+                app:visibility="gone"
+                app:layout_width="wrap_content" app:layout_height="match_parent"
+                app:layout_marginLeft="20dp" app:text="@string/txt_TO" style="@style/tv_comman_gray" />
+            <com.onjyb.customview.ETechEditText
+                app:id="@+id/edtenddtstk" app:background="@drawable/btn_rount_with_border"
+                app:paddingLeft="5dp" app:layout_marginLeft="5dp"
+                app:hint="@string/end_date" app:ems="5" app:editable="false"
+                app:layout_weight="1.0" app:onClick="selectEndDatestatistikk"
+                style="@style/common_edittext" />
+            <ImageButton app:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" app:id="@+id/imgvenddt" app:background="@android:color/transparent" app:visibility="gone"
+                app:layout_width="@dimen/UNKNOWN_DATA_0x2301" app:layout_height="@dimen/UNKNOWN_DATA_0x2301" app:layout_marginLeft="5dp" app:src="@drawable/calendar_grey" app:scaleType="fitCenter" app:onClick="selectEndDatestatistikk" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

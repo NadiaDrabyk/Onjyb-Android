@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:background="@drawable/login_bg_hdpi"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:id="@+id/ll_btns_emp"
+        android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="15dp" android:weightSum="3.0">
+        <com.onjyb.customview.ETechButton android:textColor="@color/White" android:id="@+id/btnapprove" android:background="@drawable/btn_round_corner_selected" android:layout_marginRight="10dp" android:text="@string/btn_title_approve" style="@style/btn_taggal" />
+        <com.onjyb.customview.ETechButton android:textColor="@color/dark_grey" android:id="@+id/btnnotapprove" android:background="@drawable/btn_round_corner" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="@string/btn_title_not_approve" style="@style/btn_taggal" />
+        <com.onjyb.customview.ETechButton android:textColor="@color/dark_grey" android:id="@+id/btnpending" android:background="@drawable/btn_round_corner" android:layout_marginLeft="10dp" android:text="@string/btn_title_pending" style="@style/btn_taggal" />
+    </LinearLayout>
+    <com.onjyb.customview.ETechTextView
+        android:gravity="center"
+        android:id="@+id/txtStatusofHours"
+        android:background="@color/light_grey" android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/txt_no_data" style="@style/tv_comman_green" />
+
+    <LinearLayout android:id="@+id/ll_btns_man"
+        android:visibility="gone"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_margin="15dp" android:weightSum="2.0">
+        <com.onjyb.customview.ETechButton
+            android:textColor="@color/White" android:id="@+id/btnnewtask"
+            android:background="@drawable/btn_round_corner_selected"
+            android:layout_marginRight="10dp" android:text="@string/btn_new_task"
+            style="@style/btn_taggal" />
+        <com.onjyb.customview.ETechButton
+            android:textColor="@color/dark_grey" android:id="@+id/btnpasttask"
+            android:background="@drawable/btn_round_corner"
+            android:layout_marginLeft="10dp" android:text="@string/btn_past_task"
+            style="@style/btn_taggal" />
+    </LinearLayout>
+
+    <com.onjyb.customview.ETechTextView
+        android:id="@+id/txtnodata" android:visibility="gone"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/txt_no_data" />
+
+    <ListView android:id="@+id/ls_mytask"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:divider="@color/light_grey" android:dividerHeight="1dp" />
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/login_bg_hdpi" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.onjyb.customview.Header android:id="@+id/headerleave" android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ScrollView android:background="@android:color/transparent" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_margin="0dp">
+            <com.onjyb.customview.ETechTextView
+                android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                android:id="@+id/txtStatusofHours" android:background="@color/light_grey"
+                android:paddingTop="15dp" android:paddingBottom="15dp" android:paddingLeft="15dp"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/txt_leave_request" style="@style/tv_comman_green" />
+            <ImageView android:layout_gravity="center"
+                android:id="@+id/imgprofPic"
+                android:layout_width="100dp" android:layout_height="100dp"
+                android:layout_marginTop="15dp" android:src="@drawable/profile_pic" />
+            <com.onjyb.customview.ETechTextView
+                android:layout_gravity="center"
+                android:id="@+id/txtUsername" android:text="sesdfdf" style="@style/tv_comman" />
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="15dp">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/view_margin">
+                    <com.onjyb.customview.ETechTextView android:text="@string/tv_requested_date" style="@style/tv_leave" />
+                    <com.onjyb.customview.ETechTextView android:id="@+id/txtrequestedDate" android:singleLine="true" android:layout_weight="1.0" style="@style/tv_grey_leave" />
+                </LinearLayout>
+                <View style="@style/leave_devider" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/view_margin">
+                    <com.onjyb.customview.ETechTextView android:text="@string/tv_leavetype" style="@style/tv_leave" />
+                    <com.onjyb.customview.ETechTextView android:id="@+id/txtleavetype" android:singleLine="true" android:layout_weight="1.0" style="@style/tv_grey_leave" />
+                </LinearLayout>
+                <View style="@style/leave_devider" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/view_margin">
+                    <com.onjyb.customview.ETechTextView android:text="@string/tv_project_name" style="@style/tv_leave" />
+                    <com.onjyb.customview.ETechTextView android:id="@+id/txtpname" android:singleLine="true" android:layout_weight="1.0" style="@style/tv_grey_leave" />
+                </LinearLayout>
+                <View style="@style/leave_devider" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/view_margin">
+                    <com.onjyb.customview.ETechTextView android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:text="@string/tv_leave_from" style="@style/tv_leave" />
+                    <com.onjyb.customview.ETechTextView android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/txtstrtdt1" android:singleLine="true" android:layout_weight="1.0" style="@style/tv_grey_leave" />
+                </LinearLayout>
+                <View style="@style/leave_devider" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/view_margin">
+                    <com.onjyb.customview.ETechTextView android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:text="@string/tv_leave_to" style="@style/tv_leave" />
+                    <com.onjyb.customview.ETechTextView android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/txttilDt" android:singleLine="true" android:layout_weight="1.0" style="@style/tv_grey_leave" />
+                </LinearLayout>
+                <View style="@style/leave_devider" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/view_margin">
+                    <com.onjyb.customview.ETechTextView android:text="@string/tv_leave_days" style="@style/tv_leave" />
+                    <com.onjyb.customview.ETechTextView android:id="@+id/txtLeaveDays" android:text="@string/txt_zero_days" android:singleLine="true" android:layout_weight="1.0" style="@style/tv_grey_leave" />
+                </LinearLayout>
+                <View style="@style/leave_devider" />
+                <LinearLayout android:orientation="horizontal" android:visibility="visible"
+                    android:id="@+id/ll_ptohours"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/view_margin">
+                    <com.onjyb.customview.ETechTextView android:text="@string/str_pto_hours" style="@style/tv_leave" />
+                    <com.onjyb.customview.ETechTextView android:id="@+id/txtPTOHours"
+                        android:text="@string/txt_zero_days" android:singleLine="true"
+                        android:layout_weight="1.0" style="@style/tv_grey_leave" />
+                </LinearLayout>
+                <View style="@style/leave_devider" />
+                <LinearLayout android:orientation="horizontal" android:visibility="gone"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/view_margin">
+                    <com.onjyb.customview.ETechTextView android:text="@string/tv_remain_days" style="@style/tv_leave" />
+                    <com.onjyb.customview.ETechTextView android:id="@+id/txtRemainDays"
+                        android:text="@string/txt_zero_days" android:singleLine="true"
+                        android:layout_weight="1.0" style="@style/tv_grey_leave" />
+                </LinearLayout>
+                <View style="@style/leave_devider" />
+                <com.onjyb.customview.ETechTextView android:id="@+id/tvLVcomment" android:layout_marginTop="@dimen/view_margin" android:text="@string/employee_note" style="@style/tv_comman_gray_to_blue" />
+                <com.onjyb.customview.ETechEditText android:id="@+id/edtLVReason" android:background="@drawable/btn_rount_with_border" style="@style/tv_comments" />
+                <com.onjyb.customview.ETechTextView android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                    android:id="@+id/tvdcomment1" android:paddingLeft="5dp" android:visibility="gone" android:layout_width="match_parent" style="@style/tv_leave_grey" />
+                <TextView android:gravity="top|bottom|center_vertical|fill_vertical|center|fill" android:id="@+id/txtNocommentsLv" android:paddingLeft="10dp" android:visibility="gone"
+                    android:layout_width="match_parent" android:layout_height="@dimen/UNKNOWN_DATA_0x2801" android:layout_marginTop="5dp" android:text="@string/no_comments" style="@style/tv_comman_comment_not_available" />
+                <View android:layout_marginTop="@dimen/view_margin_tendp" style="@style/leave_devider" />
+                <com.onjyb.customview.ETechTextView android:id="@+id/tvnote" android:visibility="gone" android:layout_marginTop="@dimen/view_margin" android:text="@string/managernote" style="@style/tv_comman_gray_to_blue" />
+                <com.onjyb.customview.ETechEditText android:id="@+id/edtnot" android:background="@drawable/btn_rount_with_border" android:visibility="gone" style="@style/tv_comments" />
+                <com.onjyb.customview.ETechTextView android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/tvnote1" android:paddingLeft="5dp" android:visibility="gone" android:layout_width="match_parent" style="@style/tv_leave_grey" />
+                <TextView android:gravity="top|bottom|center_vertical|fill_vertical|center|fill" android:id="@+id/txtNoNotesLv" android:paddingLeft="10dp" android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/UNKNOWN_DATA_0x2801" android:layout_marginTop="5dp" android:text="@string/no_comments" style="@style/tv_comman_comment_not_available" />
+                <View android:layout_marginTop="@dimen/view_margin_tendp" style="@style/leave_devider" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/ll_leave_update" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_marginRight="15dp" android:layout_marginBottom="5dp">
+                <com.onjyb.customview.ETechButton android:gravity="center" android:id="@+id/btncacelLeave" android:text="@string/btn_txt_reject" android:singleLine="true" android:layout_weight="1.0" style="@style/btn_style" />
+                <com.onjyb.customview.ETechButton android:gravity="center" android:id="@+id/btnupdateLeave" android:layout_marginLeft="10dp" android:text="@string/btn_txt_accept" android:singleLine="true" android:layout_weight="1.0" style="@style/btn_style" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

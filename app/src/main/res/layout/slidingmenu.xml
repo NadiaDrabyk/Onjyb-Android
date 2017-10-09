@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/White"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:src="@drawable/profile_pic" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp">
+
+                <ImageView
+                    android:id="@+id/comp_logo"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/onjyb_logo"
+                    android:adjustViewBounds="true"
+                    />
+
+                <com.onjyb.customview.ETechTextView
+                    android:textSize="@dimen/txtsize_medium_small"
+                    android:id="@+id/txtUsername"
+                    android:singleLine="false"
+                    android:capitalize="characters"
+                    style="@style/SlidingMenu_user_name_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <com.onjyb.customview.ETechTextView
+                    android:id="@+id/txtEmailId"
+                    android:visibility="gone"
+                    android:layout_marginBottom="10dp"
+                    style="@style/SlidingMenu_user_name_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_gravity="end"
+            android:id="@+id/btnProfileEdit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/btn_edit"
+            android:scaleType="fitXY" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/Dark_blue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+
+                <View style="@style/menu_devider" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/ll_home"
+                    android:background="@color/Dark_blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imghome"
+                        android:layout_width="@dimen/UNKNOWN_DATA_0x2301"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/home" />
+
+                    <com.onjyb.customview.ETechButton
+                        android:id="@+id/btnhome"
+                        android:text="@string/home"
+                        style="@style/SlidingMenuText"/>
+
+                </LinearLayout>
+
+                <View android:id="@+id/vhome" style="@style/menu_devider" />
+
+                <LinearLayout android:orientation="horizontal"
+                    android:id="@+id/ll_manager_my_job"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imgmanager_MineJobber"
+                        android:layout_width="@dimen/UNKNOWN_DATA_0x2301"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/mine_jobber" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.onjyb.customview.ETechButton
+                            android:id="@+id/manager_minejobber"
+                            android:text="@string/txt_my_Task"
+                            android:layout_alignParentLeft="true"
+                            style="@style/SlidingMenuText"/>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:id="@+id/manager_ll_unread_task"
+                            android:background="@drawable/btn_badge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true">
+
+                            <com.onjyb.customview.ETechTextView
+                                android:id="@+id/manager_txtBadgetask"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="0dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="0dp"
+                                android:layout_width="50dp"
+                                style="@style/tv_badge"/>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View android:id="@+id/vmanagerMyTask" style="@style/menu_devider" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/ll_myTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imgMineJobber"
+                        android:layout_width="@dimen/UNKNOWN_DATA_0x2301"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/mine_jobber" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.onjyb.customview.ETechButton
+                            android:id="@+id/minejobber"
+                            android:text="@string/my_task"
+                            android:layout_alignParentLeft="true"
+                            style="@style/SlidingMenuText" />
+
+                        <LinearLayout android:orientation="vertical"
+                            android:id="@+id/ll_unread_task"
+                            android:background="@drawable/btn_badge"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true">
+                            <com.onjyb.customview.ETechTextView
+                                android:id="@+id/txtBadgetask"
+                                style="@style/tv_badge" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View android:id="@+id/vMyTask" style="@style/menu_devider" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/ll_registertime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView android:id="@+id/imgRegister"
+                        android:layout_width="@dimen/UNKNOWN_DATA_0x2301"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/register_time" />
+
+                    <com.onjyb.customview.ETechButton
+                        android:id="@+id/registertime"
+                        android:background="@android:color/transparent"
+                        android:text="@string/Registertime"
+                        android:layout_weight="1.0"
+                        style="@style/SlidingMenuText" />
+
+                </LinearLayout>
+
+                <View android:id="@+id/vRegister" style="@style/menu_devider" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/ll_Leave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imgLeave"
+                        android:layout_width="@dimen/UNKNOWN_DATA_0x2301"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/calendar" />
+
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <com.onjyb.customview.ETechButton
+                            android:id="@+id/btnLeave"
+                            android:text="@string/menu_txt_leave"
+                            android:layout_alignParentLeft="true"
+                            style="@style/SlidingMenuText" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:id="@+id/ll_unread_leave"
+                            android:background="@drawable/btn_badge"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true">
+                            <com.onjyb.customview.ETechTextView
+                                android:id="@+id/txtBadgeleave"
+                                style="@style/tv_badge" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View android:id="@+id/vLeave" style="@style/menu_devider" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/ll_ApplyLeave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView android:id="@+id/imgApplyLeave"
+                        android:layout_width="@dimen/UNKNOWN_DATA_0x2301"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp" android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp" android:src="@drawable/request_leaves" />
+
+                    <com.onjyb.customview.ETechButton
+                        android:id="@+id/btnApplyLeave"
+                        android:text="@string/menu_txt_menu_leave"
+                        style="@style/SlidingMenuText" />
+                </LinearLayout>
+
+                <View android:id="@+id/vLeave1" style="@style/menu_devider" />
+
+                <LinearLayout android:orientation="horizontal"
+                    android:id="@+id/ll_Statistik"
+                    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                    <ImageView android:id="@+id/imgStatistik"
+                        android:layout_width="@dimen/UNKNOWN_DATA_0x2301" android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp" android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp" android:src="@drawable/statistics" />
+                    <com.onjyb.customview.ETechButton
+                        android:id="@+id/statistik"
+                        android:text="@string/txtt_statistick"
+                        style="@style/SlidingMenuText" />
+                </LinearLayout>
+
+                <View android:id="@+id/vStatistik" style="@style/menu_devider" />
+
+                <LinearLayout android:orientation="horizontal"
+                    android:id="@+id/ll_group_chat"
+                    android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@+id/imgGChat"
+                        android:layout_width="@dimen/UNKNOWN_DATA_0x2301" android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp" android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp" android:src="@drawable/group_chat" />
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <com.onjyb.customview.ETechButton
+                            android:id="@+id/btnGChat"
+                            android:text="@string/menu_group_chat"
+                            android:layout_alignParentLeft="true"
+                            style="@style/SlidingMenuText" />
+                        <LinearLayout android:orientation="vertical"
+                            android:id="@+id/ll_unread_chat" android:background="@drawable/btn_badge"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp" android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true">
+                            <com.onjyb.customview.ETechTextView
+                                android:id="@+id/txtBadgeGroupchat" style="@style/tv_badge" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View android:id="@+id/vGChat" style="@style/menu_devider" />
+
+                <LinearLayout android:orientation="horizontal" android:id="@+id/ll_AbboutApp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@+id/imgAboutApp"
+                        android:layout_width="@dimen/UNKNOWN_DATA_0x2301" android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp" android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp" android:src="@drawable/about_app" />
+                    <com.onjyb.customview.ETechButton
+                        android:id="@+id/btnAboutApp"
+                        android:text="@string/menu_about_app"
+                        style="@style/SlidingMenuText" />
+                </LinearLayout>
+
+                <View android:id="@+id/vAbboutApp" style="@style/menu_devider" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <LinearLayout android:gravity="top|bottom|center_vertical|fill_vertical|center|fill" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.onjyb.customview.ETechButton
+                android:layout_gravity="center"
+                android:id="@+id/logout"
+                android:layout_marginTop="7dp" android:layout_marginBottom="7dp"
+                android:text="@string/logout" style="@style/menu_logout" />
+
+            <TextView android:textSize="10sp" android:textColor="@color/White" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill" android:id="@+id/txtAppVersion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="" />
+            <TextView android:textSize="10sp" android:textColor="@color/White" android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill" android:id="@+id/buildVersion" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginBottom="10dp" android:text="10" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

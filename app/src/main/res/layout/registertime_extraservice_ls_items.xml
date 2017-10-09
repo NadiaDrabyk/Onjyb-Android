@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:background="@drawable/btn_rount_with_border"
+    android:padding="10dp"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+    <com.onjyb.customview.ETechTextView
+        android:id="@+id/txtasServiceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="80dp"
+        android:text="Service Name"
+        style="@style/tv_comman"/>
+
+    <com.onjyb.customview.ETechTextView
+        android:id="@+id/txtasServiceTime"
+        android:gravity="left"
+        android:text="Service Name"
+        android:layout_below="@+id/txtasServiceName"
+        style="@style/tv_comman_gray"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+
+    <LinearLayout
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:id="@+id/ll_Hrs_attach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtasServiceTime"
+        android:layout_below="@+id/txtasServiceName"
+        android:layout_alignParentRight="true">
+
+        <com.onjyb.customview.ETechTextView
+            android:id="@+id/tvatachment1" android:text="@string/txt_see_attachment"
+            style="@style/tv_attach"
+            android:textStyle="bold"/>
+        <ImageButton
+            android:layout_gravity="center"
+            android:id="@+id/imgbtnaddservice"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="#ffffff"
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/arrowclear"
+            android:scaleType="fitCenter"
+            android:tint="@color/green"
+            android:layout_alignParentRight="true" />
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/imgbtncancel" android:background="@android:color/transparent"
+        android:paddingLeft="5dp" android:paddingBottom="5dp"
+        android:layout_width="25dp" android:layout_height="25dp"
+        android:layout_marginLeft="10dp" android:src="@drawable/delete_ic"
+        android:scaleType="fitXY" android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>

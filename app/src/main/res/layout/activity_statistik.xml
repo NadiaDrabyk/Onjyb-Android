@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:background="@drawable/login_bg_hdpi"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+        android:scrollbarStyle="outsideOverlay" android:id="@+id/liststastikk"
+        android:clipToPadding="false" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:drawSelectorOnTop="true"
+        android:fastScrollEnabled="true" android:overScrollMode="never" />
+    <TextView android:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+        android:id="@+id/tvnoworksheet" android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="@string/txt_no_data" />
+</FrameLayout>

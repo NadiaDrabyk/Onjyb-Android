@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/Dark_blue1"
+        android:paddingLeft="15dp" android:paddingTop="5dp"
+        android:paddingRight="15dp" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView android:id="@+id/imgvworkhrs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/UNKNOWN_DATA_0x1e01"
+            android:src="@drawable/square" android:layout_weight="1.0" />
+        <ImageView android:id="@+id/imgvovettime"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/UNKNOWN_DATA_0x1e01"
+            android:src="@drawable/time" android:layout_weight="1.0" />
+        <ImageView android:id="@+id/imgvdelievery"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/UNKNOWN_DATA_0x1e01"
+            android:src="@drawable/delivery_truck" android:layout_weight="1.0" />
+    </LinearLayout>
+
+    <LinearLayout android:orientation="horizontal"
+        android:background="@color/Dark_blue1" android:paddingLeft="15dp"
+        android:paddingTop="2dp" android:paddingRight="15dp"
+        android:paddingBottom="5dp" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:layout_weight="1.0">
+            <com.onjyb.customview.ETechTextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/txttotaltime" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/total_hrs_during" style="@style/tv_comman_white" />
+            <com.onjyb.customview.ETechTextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/tvworkingHrs" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/tv_comman_white" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_TotalOvertimeView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_weight="1.0">
+            <com.onjyb.customview.ETechTextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/txtovertime" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/txt_ovvertime" style="@style/tv_comman_white" />
+            <com.onjyb.customview.ETechTextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/txtTotalworkovertime" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" style="@style/tv_comman_white" />
+            <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.onjyb.customview.ETechTextView android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_50_overtime" style="@style/tv_comman_white" />
+                <com.onjyb.customview.ETechTextView android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/tvworkOverTime" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/tv_comman_white" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.onjyb.customview.ETechTextView android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_100_overtime" style="@style/tv_comman_white" />
+                <com.onjyb.customview.ETechTextView android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/tvworkOverTime1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/tv_comman_white" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:layout_weight="1.0">
+            <com.onjyb.customview.ETechTextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/txt_km_drive_underline" android:layout_weight="1.0" style="@style/tv_comman_white" />
+            <com.onjyb.customview.ETechTextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/tvkmdrive" android:background="@color/Dark_blue1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/tv_comman_white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:background="@color/black"
+        android:paddingTop="5dp" android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.onjyb.customview.ETechTextView
+            android:id="@+id/tvpronono" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:text="@string/hash_txt" style="@style/tv_comman_white"
+            android:layout_weight="1" />
+        <com.onjyb.customview.ETechTextView
+            android:layout_weight="3.5"
+            android:id="@+id/tvproname" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:text="@string/projectname" style="@style/tv_comman_white" />
+        <com.onjyb.customview.ETechTextView
+            android:layout_weight="2.8"
+            android:id="@+id/tvdatehome" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:text="@string/Date" style="@style/tv_comman_white" />
+        <com.onjyb.customview.ETechTextView
+            android:layout_weight="2.2"
+            android:id="@+id/tvhours" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:text="@string/tv_hours" style="@style/tv_comman_white" />
+        <com.onjyb.customview.ETechTextView
+            android:id="@+id/tvKmhome" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:text="@string/tv_Km" style="@style/tv_comman_white"
+            android:layout_weight="1.5"             android:gravity="center|center_vertical"
+            />
+    </LinearLayout>
+</LinearLayout>

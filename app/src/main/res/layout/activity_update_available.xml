@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:orientation="vertical" android:id="@+id/photo_options_layout" android:background="@drawable/login_bg_hdpi" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/imgvlogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/onjyb_logo"/>
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+        <com.onjyb.customview.ETechTextView android:textSize="@dimen/textsize_large"
+            android:textStyle="bold" android:textColor="@android:color/white"
+            android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+            android:id="@+id/txtDiaTitle" android:background="@color/apps_header_color"
+            android:padding="10dp" android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/header_update" />
+        <com.onjyb.customview.ETechTextView android:textColor="@color/Dark_blue"
+            android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/txtmessage" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="20dp" android:minHeight="100dp" style="@style/tv_comman" />
+    </LinearLayout>
+    <com.onjyb.customview.ETechButton android:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+        android:id="@+id/btnupdate1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/UNKNOWN_DATA_0x3201" android:layout_margin="20dp"
+        android:text="@string/update1"/>
+    <com.onjyb.customview.ETechButton android:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+        android:id="@+id/btnskip"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/UNKNOWN_DATA_0x3201" android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" android:layout_marginBottom="20dp"
+        android:text="@string/skip"/>
+</LinearLayout>

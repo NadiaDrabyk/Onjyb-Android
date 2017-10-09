@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/timestamp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:padding="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:orientation="horizontal"
+    android:id="@+id/ll_of_hrs"
+    android:background="@drawable/btn_rount_with_border"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="5dp"
+    android:layout_weight="1.0">
+<Button
+    android:id="@+id/btnminus"
+    android:background="@drawable/btn_minus_corner"
+    android:layout_width="match_parent"
+    android:text="-"
+    android:layout_weight="1.8"
+    style="@style/btn_hrs_component" />
+<LinearLayout
+    android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1.0">
+    <TextView
+        android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+        android:id="@+id/tvtimehrs"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="@string/txt_service_time_hrs"
+        style="@style/tv_comman_gray" />
+    <TextView
+        android:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+        android:id="@+id/tvhrs"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:text="@string/Hours"
+        style="@style/tv_comman_gray" />
+</LinearLayout>
+<Button android:id="@+id/btnplus" android:background="@drawable/btn_plus_corner" android:layout_width="match_parent" android:text="+" android:layout_weight="1.8" style="@style/btn_hrs_component" />
+</LinearLayout>
+<LinearLayout android:orientation="horizontal" android:id="@+id/ll_of_min" android:background="@drawable/btn_rount_with_border" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_weight="1.0">
+<Button android:id="@+id/btnminusm" android:background="@drawable/btn_minus_corner" android:layout_width="match_parent" android:text="-" android:layout_weight="1.8" style="@style/btn_hrs_component" />
+<LinearLayout android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+    <TextView android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/tvtimemin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/txt_service_time_min" style="@style/tv_comman_gray" />
+    <TextView android:gravity="top|bottom|center_vertical|fill_vertical|center|fill" android:id="@+id/tvmins" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="2dp" android:text="@string/Min" style="@style/tv_comman_gray" />
+</LinearLayout>
+<Button android:id="@+id/btnplusm" android:background="@drawable/btn_plus_corner" android:layout_width="match_parent" android:text="+" android:layout_weight="1.8" style="@style/btn_hrs_component" />
+</LinearLayout>
+    </LinearLayout>
+    </LinearLayout>

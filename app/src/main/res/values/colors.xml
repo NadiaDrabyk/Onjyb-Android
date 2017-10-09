@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="starFullySelected">#FA726D</color>
+    <color name="starPartiallySelected">#ffffff</color>
+    <color name="starNotSelected">#ffffff</color>
+    <color name="primary_dark">#3C4758</color>
+    <color name="grey">#7c7c7c</color>
+    <color name="White">#ffffff</color>
+    <color name="green">#045800</color>
+    <color name="yellow">#e9a830</color>
+    <color name="Dark_blue">#2b5e93</color>
+    <color name="light_grey">#ededed</color>
+    <color name="WhiteSmoke">#f5f5f5</color>
+    <color name="red">#ff0000</color>
+    <color name="dark_grey">#7c7c7c</color>
+    <color name="apps_header_color">#2b5e93</color>
+    <color name="Dark_blue1">#153d73</color>
+    <color name="black">#000000</color>
+    <color name="black_translucent">#50000000</color>
+    <color name="chat_user_name">#505050</color>
+
+
+    <!--beginNadia-->
+    <color name="dlg_back_color">#212121</color>
+    <color name="option_item_bgcolor_selected">#323232</color>
+    <color name="option_item_bgcolor">#212121</color>
+    <!--endNadia-->
+</resources>

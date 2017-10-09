@@ -1,0 +1,624 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme_Splash">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="AppTheme_NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="textAllCaps">false</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="CustomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_red</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:maxHeight">50dp</item>
+    </style>
+
+
+    <style name="CustomRatingBar2" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_red</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:maxHeight">50dp</item>
+    </style>
+
+
+    <style parent="@android:style/Widget.Spinner" name="SpinnerAsEditText">
+        <item name="android:background">@android:drawable/edit_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="spinner_style" >
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+
+
+    <style name="survey_disable_reason_line">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+    <style name="drop_down">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:background">@drawable/btn_rount_with_border</item>
+        <item name="android:paddingLeft">5.0dip</item>
+        <item name="android:paddingRight">7.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">35.0dip</item>
+        <item name="android:ems">5</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawableRight">@drawable/ic_down_arrow</item>
+        <item name="android:drawablePadding">0.0dip</item>
+        <item name="android:completionThreshold">1</item>
+        <item name="android:inputType">text</item>
+        <item name="android:dropDownWidth">325.0dip</item>
+        <item name="android:dropDownHorizontalOffset">5.0dip</item>
+        <item name="android:dropDownVerticalOffset">5.0dip</item>
+        <item name="android:drawableTint">@color/grey</item>
+
+    </style>
+
+    <style name="btn_style">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:background">@drawable/btn_bg_login_border</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+
+    </style>
+
+    <style name="tv_comman">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/Dark_blue</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!--<item name="android:layout_weight">1</item>-->
+        <!--<item name="android:gravity">left|center_vertical</item>-->
+
+    </style>
+    <style name="tv_comman_white">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+
+    <style name="tv_comman_gray">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+    <style name="btn_taggal">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">35dp</item>
+    </style>
+
+    <style name="tv_attach">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="tv_comman_green">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+    <style name="tv_leave_grey">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">right</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="tv_leave">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/Dark_blue</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="leave_devider">
+        <item name="android:background">@color/light_grey</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+    <style name="tv_comman_large_font">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/Dark_blue</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+    <style name="tv_grey_leave">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textColor">@color/grey</item>
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+    <!--
+
+            <item>1</item>
+
+        <item>15</item>
+        <item>11</item>
+        <item>?unknown_ref: 0</item>
+        <item>5dp</item>
+        <item>-1</item>
+        <item>35dp</item>
+        <item>5</item>
+        <item>true</item>
+    -->
+
+    <style name="tv_comman_gray_to_blue">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/Dark_blue</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="tv_comman_comment_not_available">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/grey</item>
+
+    </style>
+    <style name="tv_comments">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:background">@drawable/btn_rount_with_border</item>
+        <item name="android:tint">@string/hint_comment_for_registrer</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="home">
+      <!--  <item>11</item>
+        <item>11</item>
+        <item>@dimen/ten_all_side_padding</item>-->
+        <item name="android:layout_width">@dimen/one_twenty</item>
+        <item name="android:layout_height">@dimen/one_twenty</item>
+    </style>
+
+    <style name="tv_badge">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="btn_hrs_component">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/Dark_blue</item>
+        <item name="android:background">@color/light_grey</item>
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_gravity">center</item>
+
+
+    </style>
+    <style name="lbl_total_time_grey">
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="lbl_total_time">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="tv_calander">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:background">@color/Dark_blue1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    <!--    <item>15sp</item>
+        <item>1</item>
+        <item>@color/White</item>
+        <item>10</item>
+        <item>@color/Dark_blue1</item>
+        <item>15dp</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>1.0</item>-->
+    </style>
+
+    <style name="btn_style_red">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:background">@drawable/btn_bg_red_round_border</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">35.0dp</item>
+      <!--  <item>15sp</item>
+        <item>@color/White</item>
+        <item>3</item>
+        <item>@drawable/btn_bg_red_round_border</item>
+        <item>-2</item>
+        <item>35dp</item>
+        <item>0dp</item>
+        <item>@string/roboto_bold</item>-->
+    </style>
+    <style name="btn_style_green">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:background">@drawable/btn_bg_green_round_border</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">35.0dp</item>
+       <!-- <item>15sp</item>
+        <item>@color/White</item>
+        <item>3</item>
+        <item>@drawable/btn_bg_green_round_border</item>
+        <item>-2</item>
+        <item>35dp</item>
+        <item>0dp</item>
+        <item>@string/roboto_bold</item>-->
+    </style>
+
+    <style name="btn_hrs_component1">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/Dark_blue</item>
+        <item name="android:background">@color/light_grey</item>
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">match_parent</item>
+     <!--   <item>15sp</item>
+        <item>1</item>
+        <item>@color/Dark_blue</item>
+        <item>11</item>
+        <item>@color/light_grey</item>
+        <item>0dp</item>
+        <item>30dp</item>
+        <item>-1</item>
+        <item>@string/roboto_bold</item>-->
+    </style>
+
+
+    <style name="drop_down_leave">
+
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">35.0dip</item>
+        <item name="android:ems">5</item>
+        <item name="android:singleLine">true</item>
+        <!--<item name="android:drawableRight">@drawable/dropdown1</item>-->
+
+        <item name="android:background">@null</item>
+        <item name="android:drawableRight">@drawable/ic_down_arrow</item>
+        <item name="android:drawablePadding">0.0dip</item>
+        <item name="android:completionThreshold">1</item>
+    </style>
+
+    <style name="common_edittext">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/grey</item>
+
+        <item name="android:layout_width">wrap_content</item>
+
+        <item name="android:layout_height">35dp</item>
+       <!-- <item>-2</item>
+        <item>35dp</item>
+        <item>true</item>
+        <item>@string/roboto_bold</item>-->
+    </style>
+
+    <style name="tv_extra_services">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:background">@color/grey</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="tv_comman_chat_name">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/chat_user_name</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+    <style name="tv_comman_chat_message">
+
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/Dark_blue</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@string/roboto_medium</item>
+
+      <!--  <item>16sp</item>
+        <item>1</item>
+        <item>@color/Dark_blue</item>
+        <item>f</item>
+        <item>-2</item>
+        <item>-2</item>
+        <item>@dimen/twenty_size</item>
+        <item>@string/roboto_medium</item>-->
+    </style>
+
+    <style name="tv_comman_chat_time">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@string/roboto_italic</item>
+     <!--   <item>13sp</item>
+        <item>2</item>
+        <item>@string/roboto_italic</item>-->
+    </style>
+
+    <style name="edt_message">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:background">@drawable/btn_rount_with_border</item>
+        <item name="android:hint">@string/hint_type_msg</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:fontFamily">@string/roboto_regular</item>
+        <!--   <item>13sp</item>
+           <item>@color/grey</item>
+           <item>@drawable/btn_rount_with_border</item>
+           <item>10dp</item>
+           <item>4dp</item>
+           <item>10dp</item>
+           <item>6dp</item>
+           <item>-1</item>
+           <item>-1</item>
+           <item>@string/hint_type_msg</item>
+           <item>5</item>
+           <item>1</item>
+           <item>10</item>
+           <item>350</item>
+           <item>1.0</item>
+           <item>20001</item>
+           <item>@string/roboto_regular</item>-->
+    </style>
+    <style name="btn_taggal_white">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/Dark_blue</item>
+        <item name="android:background">@drawable/btn_bg_white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+    <style name="edt_login">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:background">@drawable/btn_rount_with_border</item>
+        <item name="android:hint">@string/hint_type_msg</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:singleLine">true</item>
+        <!-- <item>18sp</item>
+         <item>@color/grey</item>
+         <item>@drawable/btn_rount_with_border</item>
+         <item>15dp</item>
+         <item>-1</item>
+         <item>45dp</item>
+         <item>15dp</item>
+         <item>0dp</item>
+         <item>true</item>
+         <item>80001</item>
+         <item>@string/roboto_bold</item>-->
+    </style>
+
+    <style name="menu_devider">
+        <item name="android:background">#55ffffff</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <!--<item>-1</item>-->
+        <!--<item>25dp</item>-->
+        <!--<item>25dp</item>-->
+    </style>
+
+    <style name="SlidingMenu_user_name_email">
+        <item name="android:textSize">@dimen/textsize_medium_large</item>
+        <!--<item>1</item>-->
+        <item name="android:textColor">@color/Dark_blue</item>
+        <!--<item>13</item>-->
+        <!--<item>?unknown_ref: 0</item>-->
+        <!--<item>-2</item>-->
+        <!--<item>-2</item>-->
+        <!--<item>true</item>-->
+        <!--<item>15dp</item>-->
+        <!--<item>@string/roboto_bold</item>-->
+    </style>
+
+    <style name="SlidingMenuText">
+        <item name="android:textSize">@dimen/textsize_medium_large</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <!--<item>1</item>-->
+        <item name="android:textColor">@color/White</item>
+        <!--<item>3</item>-->
+        <item name="android:background">@android:color/transparent</item>
+        <!--<item>20dp</item>-->
+        <!--<item>15dp</item>-->
+        <!--<item>20dp</item>-->
+        <!--<item>15dp</item>-->
+        <!--<item>-1</item>-->
+        <!--<item>-2</item>-->
+        <!--<item>15dp</item>-->
+        <!--<item>1.0</item>-->
+        <!--<item>@string/roboto_bold</item>-->
+    </style>
+
+    <style name="menu_logout">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/Dark_blue</item>
+        <item name="android:background">@drawable/btn_menu_logout</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <!--<item>-1</item>-->
+        <!--<item>50dp</item>-->
+        <!--<item>20dp</item>-->
+        <!--<item>20dp</item>-->
+        <!--<item>30dp</item>-->
+        <!--<item>@string/roboto_bold</item>-->
+    </style>
+
+    <style name="profile_username">
+        <item name="android:textSize">@dimen/textsize_medium_large</item>
+        <!--<item>1</item>-->
+        <item name="android:textColor">@color/White</item>
+        <!--<item>13</item>-->
+        <!--<item>?unknown_ref: 0</item>-->
+        <!--<item>-2</item>-->
+        <!--<item>-2</item>-->
+        <!--<item>true</item>-->
+        <!--<item>15dp</item>-->
+        <!--<item>@string/roboto_bold</item>-->
+    </style>
+
+    <style name="profile_textView">
+        <item name="android:textSize">@dimen/textsize_medium_large</item>
+        <!--<item>1</item>-->
+        <item name="android:textColor">@color/White</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!--<item>13</item>-->
+        <!--<item>?unknown_ref: 0</item>-->
+        <!--<item>-2</item>-->
+        <!--<item>-2</item>-->
+        <!--<item>true</item>-->
+        <!--<item>15dp</item>-->
+        <!--<item>@string/roboto_bold</item>-->
+    </style>
+
+    <style name="edt_tv_psw">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:background">@drawable/btn_rount_with_border</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:layout_marginRight">25dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:padding">5dp</item>
+        <!--<item>15dp</item>-->
+        <!--<item>-1</item>-->
+        <!--<item>45dp</item>-->
+        <!--<item>25dp</item>-->
+        <!--<item>15dp</item>-->
+        <!--<item>25dp</item>-->
+        <!--<item>0dp</item>-->
+        <!--<item>true</item>-->
+        <!--<item>80081</item>-->
+        <!--<item>@string/roboto_bold</item>-->
+    </style>
+
+    <style name="profile_editText">
+        <item name="android:textSize">@dimen/textsize_medium_large</item>
+        <!--<item>1</item>-->
+        <item name="android:textColor">@color/White</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:gravity">right</item>
+        <!--<item>15</item>-->
+        <!--<item>?unknown_ref: 0</item>-->
+        <!--<item>-2</item>-->
+        <!--<item>-2</item>-->
+        <!--<item>true</item>-->
+        <!--<item>15dp</item>-->
+        <!--<item>@string/roboto_bold</item>-->
+    </style>
+
+    <style name="btn_style_white">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/Dark_blue</item>
+        <!--<item>3</item>-->
+        <item name="android:background">@drawable/btn_bg_white_corner</item>
+        <!--<item>-1</item>-->
+        <!--<item>45dp</item>-->
+        <!--<item>0dp</item>-->
+        <!--<item>@string/roboto_bold</item>-->
+    </style>
+</resources>

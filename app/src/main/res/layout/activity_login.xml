@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+    android:orientation="vertical"
+    android:background="@drawable/login_bg_hdpi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp">
+
+            <ImageView android:id="@+id/imgvlogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/onjyb_logo"
+                android:layout_marginBottom="10dp"/>
+
+            <com.onjyb.customview.ETechTextView
+                android:id="@+id/tvappname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#2b5e93"
+                android:gravity="center"
+                android:text="@string/slogen"
+                style="@style/tv_comman" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="25dp">
+
+                <com.onjyb.customview.ETechEditText
+                    android:id="@+id/edtloginemail"
+                    android:hint="@string/txt_email"
+                    android:inputType="textEmailAddress"
+                    style="@style/edt_login" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_psw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <com.onjyb.customview.ETechEditText
+                    android:id="@+id/edtloginpsw"
+                    android:hint="@string/txt_psw"
+                    android:inputType="textPassword"
+                    style="@style/edt_login"/>
+
+            </LinearLayout>
+
+            <com.onjyb.customview.ETechButton
+                android:id="@+id/btnlogin"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp"
+                android:layout_gravity="center"
+                android:text="@string/login"
+                android:capitalize="words"
+                style="@style/btn_style" />
+
+            <com.onjyb.customview.ETechButton
+                android:gravity="center"
+                android:id="@+id/btnForgotPwd"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:text="@string/forgotpassword"
+                style="@style/tv_comman" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

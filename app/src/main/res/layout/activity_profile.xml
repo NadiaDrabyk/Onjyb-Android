@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res/android"
+    custom:orientation="vertical"
+    custom:background="@color/White"
+    custom:layout_width="match_parent"
+    custom:layout_height="match_parent">
+    <LinearLayout
+        custom:orientation="vertical"
+        custom:layout_width="match_parent"
+        custom:layout_height="match_parent">
+
+        <FrameLayout custom:background="@color/Dark_blue" custom:layout_width="match_parent" custom:layout_height="wrap_content">
+            <LinearLayout
+                custom:gravity="center" custom:orientation="vertical"
+                custom:layout_width="match_parent" custom:layout_height="wrap_content">
+                <ImageView
+                    custom:layout_gravity="center"
+                    custom:id="@+id/imgprofPic22" custom:background="@android:color/transparent"
+                    custom:layout_width="100dp" custom:layout_height="100dp"
+                    custom:layout_marginTop="15dp" custom:src="@drawable/profile_pic" />
+                <com.onjyb.customview.ETechEditText custom:id="@+id/txtUsername"
+                    custom:hint="@string/text_username" style="@style/profile_username" custom:background="@null"
+                    custom:layout_width="wrap_content" custom:layout_height="wrap_content"/>
+                <LinearLayout custom:orientation="vertical" custom:paddingTop="30dp"
+                    custom:layout_width="match_parent" custom:layout_height="wrap_content">
+                    <LinearLayout custom:orientation="horizontal" custom:id="@+id/ll_Email"
+                        custom:paddingLeft="25dp" custom:paddingRight="25dp" custom:paddingBottom="10dp"
+                        custom:layout_width="match_parent" custom:layout_height="wrap_content">
+                        <com.onjyb.customview.ETechTextView custom:id="@+id/tvEmail"
+                            custom:text="@string/tv_email" style="@style/profile_textView" />
+                        <com.onjyb.customview.ETechEditText custom:id="@+id/edtemail"
+                            custom:background="@null"
+                            custom:editable="false" custom:layout_weight="1.0" style="@style/profile_editText" />
+                    </LinearLayout>
+                    <View style="@style/menu_devider" />
+                    <LinearLayout custom:orientation="horizontal" custom:id="@+id/ll_mobile"
+                        custom:paddingLeft="25dp" custom:paddingTop="10dp" custom:paddingBottom="10dp"
+                        custom:paddingRight="25dp"
+                        custom:layout_width="match_parent" custom:layout_height="wrap_content">
+                        <com.onjyb.customview.ETechTextView custom:id="@+id/tvmobile" custom:text="@string/tv_mobile"
+                            style="@style/profile_textView" />
+                        <com.onjyb.customview.ETechEditText custom:id="@+id/edtmobile" custom:hint="@string/txt_mobile"
+                            custom:maxLength="10" custom:layout_weight="1.0"
+                            custom:background="@null"
+                            custom:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+                            style="@style/profile_editText" />
+                    </LinearLayout>
+                    <View style="@style/menu_devider" />
+                    <LinearLayout custom:orientation="horizontal" custom:id="@+id/ll_Address"
+                        custom:paddingLeft="25dp" custom:paddingTop="10dp" custom:paddingBottom="10dp"
+                        custom:paddingRight="25dp"
+                        custom:layout_width="match_parent" custom:layout_height="wrap_content">
+                        <com.onjyb.customview.ETechTextView custom:id="@+id/tvAddress"
+                            custom:text="@string/tv_address" style="@style/profile_textView" />
+                        <com.onjyb.customview.ETechEditText custom:id="@+id/edtAddress"
+                            custom:background="@null"
+                            custom:hint="@string/txt_address" custom:layout_weight="1.0" style="@style/profile_editText" />
+                    </LinearLayout>
+                    <com.onjyb.customview.ETechButton
+                        custom:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+                        custom:id="@+id/btnupdateDetail" custom:layout_marginLeft="25dp" custom:layout_marginTop="10dp"
+                        custom:layout_marginRight="25dp" custom:layout_marginBottom="25dp"
+                        custom:text="@string/txt_updateDetail" style="@style/btn_style_white"
+                        custom:layout_width="match_parent" custom:layout_height="40dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                custom:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" custom:visibility="invisible"
+                custom:layout_width="@dimen/UNKNOWN_DATA_0x1e01" custom:layout_height="@dimen/UNKNOWN_DATA_0x1e01"
+                custom:padding="5dp"
+                custom:layout_marginTop="15dp" custom:layout_marginRight="15dp"
+                custom:src="@drawable/btn_edit" custom:scaleType="fitXY" />
+        </FrameLayout>
+        <LinearLayout custom:orientation="vertical" custom:background="@color/White"
+            custom:layout_width="match_parent" custom:layout_height="match_parent" custom:layout_marginTop="10dp">
+            <com.onjyb.customview.ETechEditText custom:id="@+id/edtoldPsw" custom:hint="@string/txt_old_psw"
+                style="@style/edt_tv_psw" />
+            <com.onjyb.customview.ETechEditText custom:id="@+id/edtnewPsw" custom:hint="@string/txt_new_psw"
+                style="@style/edt_tv_psw" />
+            <com.onjyb.customview.ETechEditText custom:id="@+id/edtnewPsw1" custom:hint="@string/txt_re_enter_psw"
+                style="@style/edt_tv_psw" />
+            <com.onjyb.customview.ETechButton custom:id="@+id/btnchangePsw" custom:layout_marginLeft="25dp"
+                custom:layout_marginTop="15dp" custom:layout_marginRight="25dp"
+                custom:layout_marginBottom="25dp" custom:text="@string/btn_chng_psw" style="@style/btn_style" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

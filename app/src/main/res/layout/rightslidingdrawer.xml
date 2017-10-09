@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/White"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp">
+<LinearLayout
+    android:background="@color/Dark_blue"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+<Button
+    android:gravity="center"
+    android:id="@+id/btncancel"
+    android:visibility="gone"
+    android:text="@string/btn_calcel"
+    android:singleLine="true"
+    android:layout_weight="1.0"
+    style="@style/btn_taggal_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+<Button
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:id="@+id/btnclear"
+    android:layout_marginLeft="10dp"
+    android:text="@string/btn_clear"
+    android:singleLine="true"
+    android:layout_weight="1.0"
+    style="@style/btn_taggal_white"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp" />
+<Button
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:id="@+id/btnsearch"
+    android:layout_marginLeft="10dp"
+    android:text="@string/btn_search"
+    android:singleLine="true"
+    android:layout_weight="1.0"
+    style="@style/btn_taggal_white"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp" />
+</LinearLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp">
+    <TextView android:layout_marginTop="@dimen/view_margin" android:text="@string/select_project" style="@style/tv_comman_gray_to_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.onjyb.customview.EtechEditAutoCompleteTextRobotoRegular
+        android:id="@+id/auto_proname"
+        android:hint="@string/txt_select_project"
+        android:inputType="text"
+        style="@style/drop_down" />
+    <TextView
+        android:id="@+id/txtLeavetype"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/view_margin"
+        android:text="@string/select_leaveType"
+        style="@style/tv_comman_gray_to_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:id="@+id/rel_auto_srch1"
+        android:background="@drawable/btn_rount_with_border"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        <ImageView
+            android:id="@+id/imageView1"
+            android:focusable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_down_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+        <Spinner
+            android:id="@+id/auto_leaveType"
+            android:paddingLeft="0dp"
+            android:background="#00000000"
+            android:layout_width="match_parent"
+            android:layout_margin="1dp"
+            android:layout_height="match_parent"
+            android:drawSelectorOnTop="false"
+            android:minHeight="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:dropDownWidth="match_parent"
+            android:dropDownVerticalOffset="35dp"
+            android:spinnerMode="dropdown" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/txtStatusName"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/view_margin"
+        android:text="@string/select_status"
+        style="@style/tv_comman_gray_to_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:id="@+id/rel_auto_status"
+        android:background="@drawable/btn_rount_with_border"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageViewstatus"
+            android:focusable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_down_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+        <Spinner
+            android:id="@+id/auto_Status"
+            android:background="#00000000"
+            android:paddingLeft="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="false"
+            android:minHeight="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:dropDownWidth="match_parent"
+            android:dropDownVerticalOffset="35dp"
+            android:spinnerMode="dropdown" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/txtemployee"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/view_margin"
+        android:text="@string/select_employee"
+        style="@style/tv_comman_gray_to_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <AutoCompleteTextView
+        android:id="@+id/auto_employee"
+        android:visibility="gone"
+        android:hint="@string/select_employee_hint"
+        style="@style/drop_down" />
+    <TextView
+        android:id="@+id/tvService"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/view_margin"
+        android:text="@string/select_services"
+        style="@style/tv_comman_gray_to_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <AutoCompleteTextView
+        android:id="@+id/auto_service"
+        android:visibility="gone"
+        android:hint="@string/hint_select_service"
+        style="@style/drop_down" />
+    <TextView
+        android:id="@+id/tvBranch"
+        android:layout_marginTop="@dimen/view_margin"
+        android:text="@string/select_branch"
+        style="@style/tv_comman_gray_to_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <AutoCompleteTextView
+        android:id="@+id/auto_branch"
+        android:hint="@string/hint_select_branch"
+        style="@style/drop_down" />
+    <TextView
+        android:id="@+id/tvstrtdt"
+        android:layout_marginTop="@dimen/view_margin"
+        android:text="@string/start_date"
+        style="@style/tv_comman_gray_to_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:gravity="left|center_vertical"
+            android:id="@+id/tvstrdate"
+            android:background="@drawable/btn_rount_with_border"
+            android:paddingLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="@string/start_date" android:singleLine="true" android:layout_weight="1.0" style="@style/tv_comman" />
+        <ImageButton
+            android:layout_gravity="center"
+            android:id="@+id/imgDate"
+            android:background="#ffffff"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/btn_calender"
+            android:scaleType="fitCenter"
+            android:onClick="selectDatetoSearch" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvendate"
+        android:layout_marginTop="@dimen/view_margin"
+        android:text="@string/end_date"
+        style="@style/tv_comman_gray_to_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:gravity="left|center_vertical"
+            android:id="@+id/tvEndDt"
+            android:background="@drawable/btn_rount_with_border"
+            android:paddingLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="@string/end_date"
+            android:singleLine="true"
+            android:layout_weight="1.0"
+            style="@style/tv_comman" />
+        <ImageButton
+            android:layout_gravity="center"
+            android:id="@+id/imgDate2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="#ffffff"
+            android:src="@drawable/btn_calender"
+            android:scaleType="fitCenter"
+            android:onClick="selectDatetoSearch1" />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
+    </LinearLayout>

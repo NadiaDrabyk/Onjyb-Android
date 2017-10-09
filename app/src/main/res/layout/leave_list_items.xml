@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+    android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.onjyb.customview.ETechTextView
+            android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+            android:id="@+id/txtLvDays" android:visibility="gone"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/tv_comman" />
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_weight="1.0">
+            <com.onjyb.customview.ETechTextView android:id="@+id/txtLvtype" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="sl" style="@style/tv_comman_large_font" />
+            <com.onjyb.customview.ETechTextView android:id="@+id/txtLvTiltle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLength="100" style="@style/tv_comman" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7dp">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.onjyb.customview.ETechTextView android:textSize="13sp" android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/txtFrom" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/txt_leave_from" style="@style/tv_leave_grey" />
+                    <com.onjyb.customview.ETechTextView android:textSize="13sp" android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/txtLvFrom" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/tv_leave_grey" />
+                    <TextView android:textColor="@color/grey" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="-" />
+                    <com.onjyb.customview.ETechTextView android:textSize="13sp" android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/txtLvTo" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/tv_leave_grey" />
+                </LinearLayout>
+                <TextView android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:background="@color/dark_grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" />
+                <com.onjyb.customview.ETechTextView android:id="@+id/txtStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="sl" style="@style/tv_leave" />
+                <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.onjyb.customview.ETechTextView android:textSize="13sp" android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/txtTo" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/txt_leave_to" style="@style/tv_comman" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageButton android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@+id/imgbtntab" android:background="@android:color/transparent" android:paddingLeft="5dp" android:paddingBottom="5dp" android:focusable="false"
+            android:layout_width="@dimen/UNKNOWN_DATA_0x2301"
+            android:layout_height="@dimen/UNKNOWN_DATA_0x2301" android:layout_marginLeft="5dp" android:src="@drawable/forword_arrow" android:scaleType="fitXY" android:tint="@color/Dark_blue" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/linBtnView1" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.onjyb.customview.ETechButton android:textColor="@color/White" android:id="@+id/btncancelLv" android:background="@drawable/btn_round_corner_selected" android:visibility="gone" android:layout_marginRight="5dp" android:text="@string/btn_txt_cancel" android:layout_weight="1.0" style="@style/btn_taggal" />
+    </LinearLayout>
+</LinearLayout>

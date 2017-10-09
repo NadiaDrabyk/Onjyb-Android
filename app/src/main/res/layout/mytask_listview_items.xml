@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+    android:orientation="vertical" android:padding="10dp"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent" android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_gravity="top"
+            android:id="@+id/imgprofiletask" android:visibility="visible"
+            android:layout_width="@dimen/UNKNOWN_DATA_0x3201"
+            android:layout_height="@dimen/UNKNOWN_DATA_0x3201" android:src="@drawable/profile_pic" />
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" android:layout_weight="1.0">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.onjyb.customview.ETechTextView android:gravity="left" android:layout_marginRight="10dp"
+                    android:id="@+id/txtmonth"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/tv_comman" />
+
+                <com.onjyb.customview.ETechTextView
+                    android:id="@+id/txtproname" android:text="aasga"
+                    style="@style/tv_comman" />
+            </LinearLayout>
+
+
+            <LinearLayout android:orientation="horizontal"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                <com.onjyb.customview.ETechTextView
+                    android:id="@+id/txtaddress"
+                    android:text="afda"
+                    style="@style/tv_comman_gray" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/pipe1" android:background="@color/dark_grey"
+                    android:layout_width="1dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="10dp" android:layout_marginRight="10dp" />
+                <com.onjyb.customview.ETechTextView
+                    android:textSize="12sp"
+                    android:id="@+id/txtStatus1" android:visibility="visible"
+                    style="@style/tv_comman"/>
+            </LinearLayout>
+
+            <com.onjyb.customview.ETechTextView
+                android:textSize="12sp" android:textColor="@color/Dark_blue"
+                android:layout_gravity="left"
+                android:id="@+id/txtTaskCreateDate" android:visibility="gone"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                style="@style/tv_comman_gray" />
+
+            <LinearLayout android:orientation="horizontal"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+                <LinearLayout android:orientation="horizontal"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.onjyb.customview.ETechTextView android:textSize="13sp"
+                        android:id="@+id/tvhrs1"
+                        android:text="@string/txt_total_Hrs" style="@style/tv_comman" />
+
+                    <com.onjyb.customview.ETechTextView android:textSize="12sp"
+                        android:textColor="@color/green"
+                        android:id="@+id/txthrs"
+                        android:layout_marginLeft="2dp" android:text="00h 00m" style="@style/tv_comman" />
+                </LinearLayout>
+                <TextView android:background="@color/dark_grey"
+                    android:layout_gravity="center"
+                    android:layout_width="1dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="5dp" android:layout_marginRight="5dp" />
+                <LinearLayout android:orientation="horizontal"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.onjyb.customview.ETechTextView android:textSize="13sp"
+                        android:id="@+id/tvoverhrs"
+                        android:text="@string/txt_over_time_Hrs" style="@style/tv_comman" />
+                    <com.onjyb.customview.ETechTextView android:textSize="12sp"
+                        android:textColor="@color/green"
+                        android:id="@+id/txtOvertimeHrs"
+                        android:layout_marginLeft="2dp" android:text="00h 00m"
+                        style="@style/tv_comman" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+                android:orientation="horizontal" android:id="@+id/linBtnView"
+                android:visibility="visible"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_margin">
+                <com.onjyb.customview.ETechButton android:textColor="@color/green"
+                    android:id="@+id/btnaccept" android:background="@drawable/btn_roun_corner_green_border"
+                    android:layout_marginRight="5dp" android:text="@string/btn_txt_accept" style="@style/btn_taggal"
+                    android:layout_height="30dp"/>
+                <com.onjyb.customview.ETechButton android:textColor="@color/red"
+                    android:id="@+id/btnreject" android:background="@drawable/btn_round_corner_red_border"
+                    android:layout_marginLeft="5dp" android:text="@string/btn_txt_reject" style="@style/btn_taggal"
+                    android:layout_height="30dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/imgbtntab"
+            android:background="@android:color/transparent"
+            android:focusable="false"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="2dp" android:src="@drawable/forword_arrow"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+    <com.onjyb.customview.ETechTextView
+        android:id="@+id/tvatachment"
+        android:paddingTop="5dp" android:paddingBottom="5dp"
+        android:visibility="gone"
+        android:text="@string/txt_see_attachment" style="@style/tv_attach" />
+</LinearLayout>

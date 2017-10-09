@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/login_bg_hdpi"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/Dark_blue1"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <com.onjyb.customview.ETechTextView
+            android:id="@+id/txtenddate"
+            android:paddingLeft="15dp"
+            android:text="@string/txt_date"
+            android:singleLine="true"
+            android:layout_width="wrap_content"
+            style="@style/tv_comman_white" />
+        <com.onjyb.customview.ETechTextView
+            android:id="@+id/txtstrtdtregister"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:singleLine="true"
+            style="@style/tv_calander" />
+        <ImageButton
+            android:layout_gravity="center"
+            android:id="@+id/imgvstart"
+            android:background="@color/Dark_blue1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/calendar"
+            android:scaleType="fitCenter"
+            android:onClick="selectDate" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/Dark_blue1"
+        android:paddingRight="15dp"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.onjyb.customview.ETechTextView
+            android:id="@+id/txtstartdate"
+            android:paddingLeft="15dp"
+            android:text="@string/txt_finish_work"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            style="@style/tv_comman_white" />
+        <com.onjyb.customview.ETechTextView
+            android:id="@+id/txtenddateregister"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            style="@style/tv_calander" />
+        <ImageButton
+            android:layout_gravity="center"
+            android:id="@+id/imgvenddate"
+            android:background="@color/Dark_blue1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/calendar"
+            android:scaleType="fitCenter"
+            android:onClick="selectEndDate" />
+    </LinearLayout>
+    
+    
+    <ScrollView 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_weight="1.0">
+        
+        <LinearLayout 
+            android:orientation="vertical" 
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content" 
+            android:layout_marginTop="@dimen/view_margin">
+
+            <LinearLayout 
+                android:orientation="vertical" 
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content" 
+                android:layout_marginLeft="15dp" 
+                android:layout_marginRight="15dp">
+                
+                <com.onjyb.customview.ETechTextView 
+                    android:text="@string/select_project" 
+                    style="@style/tv_comman_gray_to_blue" />
+                <RelativeLayout 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content">
+                    <com.onjyb.customview.EtechEditAutoCompleteTextRobotoRegular 
+                        android:id="@+id/atctv_proname" 
+                        android:background="@drawable/btn_rount_with_border"
+                        android:hint="@string/txt_select_project" 
+                        style="@style/drop_down" />
+                    <ImageView 
+                        android:padding="0dp" 
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" 
+                        android:layout_marginRight="5dp" 
+                        android:src="@drawable/ic_down_arrow" 
+                        android:layout_alignParentRight="true" 
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+                
+                <TextView 
+                    android:gravity="top|bottom|center_vertical|fill_vertical|center|fill" 
+                    android:id="@+id/tvnoeditprojectname" 
+                    android:background="@drawable/btn_round_corner" 
+                    android:paddingLeft="5dp"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="2dp" 
+                    android:text="@string/txt_noproject_available" 
+                    style="@style/tv_comman_gray" />
+                
+                <com.onjyb.customview.ETechTextView 
+                    android:visibility="gone" 
+                    android:layout_marginTop="@dimen/view_margin" 
+                    android:text="@string/select_services" 
+                    style="@style/tv_comman_gray_to_blue" />
+                
+                <AutoCompleteTextView 
+                    android:id="@+id/actv_service" 
+                    android:paddingRight="5dp" 
+                    android:visibility="gone" 
+                    android:hint="@string/hint_select_service" 
+                    android:drawableRight="@drawable/search_ic" 
+                    style="@style/drop_down" />
+                
+                <com.onjyb.customview.ETechTextView 
+                    android:layout_marginTop="@dimen/view_margin" 
+                    android:text="@string/select_branch" 
+                    style="@style/tv_comman_gray_to_blue" />
+                
+                <AutoCompleteTextView 
+                    android:id="@+id/actvbranch" 
+                    android:hint="@string/hint_select_branch" 
+                    style="@style/drop_down" />
+                
+                <LinearLayout 
+                    android:orientation="vertical" 
+                    android:id="@+id/ll_of_hrs" 
+                    android:background="@drawable/btn_rount_with_border" 
+                    android:visibility="visible"
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="@dimen/view_margin" 
+                    android:layout_weight="1.0">
+                    
+                    <LinearLayout 
+                        android:orientation="vertical" 
+                        android:background="@drawable/layout_up_round_corner" 
+                        android:paddingLeft="@dimen/view_margin" 
+                        android:paddingTop="10dp" 
+                        android:paddingRight="@dimen/view_margin" 
+                        android:paddingBottom="10dp" 
+                        android:layout_width="match_parent" 
+                        android:layout_height="wrap_content">
+                        
+                        <com.onjyb.customview.ETechTextView 
+                            android:id="@+id/btnminus" 
+                            android:layout_width="match_parent" 
+                            android:text="@string/tv_select_work_hrs" 
+                            style="@style/tv_comman_large_font" />
+                        <com.onjyb.customview.ETechTextView 
+                            android:gravity="top|bottom|center_vertical|fill_vertical|center|fill" 
+                            android:id="@+id/lblWorkingHrs" 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="match_parent" 
+                            android:layout_marginLeft="2dp" 
+                            android:text="@string/lable_text" 
+                            style="@style/tv_comman_gray" />
+                    </LinearLayout>
+
+                    <LinearLayout 
+                        android:orientation="horizontal" 
+                        android:paddingLeft="@dimen/view_margin" 
+                        android:paddingTop="10dp" 
+                        android:paddingBottom="10dp" 
+                        android:layout_width="match_parent" 
+                        android:layout_height="wrap_content">
+                        
+                        <LinearLayout 
+                            android:orientation="horizontal" 
+                            android:paddingRight="25dp" 
+                            android:layout_width="match_parent" 
+                            android:layout_height="wrap_content" 
+                            android:layout_weight="1.0">
+                                
+                            <com.onjyb.customview.ETechButton 
+                                android:gravity="center" 
+                                android:id="@+id/btnstartWork" 
+                                android:text="@string/txt_start_work"
+                                style="@style/btn_style_green" />
+                            <com.onjyb.customview.ETechTextView 
+                                android:gravity="center" 
+                                android:layout_gravity="center" 
+                                android:id="@+id/tv_WorkHrs_start" 
+                                android:layout_width="match_parent" 
+                                android:layout_height="match_parent" 
+                                android:text="@string/txt_service_time_hrs1" 
+                                style="@style/tv_comman_gray" />
+                        </LinearLayout>
+                        
+                        <TextView 
+                            android:background="@color/dark_grey" 
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp" 
+                            android:layout_marginRight="5dp" />
+                        
+                        <ImageButton
+                            android:layout_gravity="center"
+                            android:id="@+id/img_work_hrs_start" 
+                            android:background="@color/White" 
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:layout_marginLeft="25dp" 
+                            android:layout_marginRight="25dp" 
+                            android:src="@drawable/clock" 
+                            android:scaleType="fitCenter" />
+                    </LinearLayout>
+                    
+                    <LinearLayout 
+                        android:orientation="horizontal" 
+                        android:paddingLeft="@dimen/view_margin" 
+                        android:paddingTop="10dp" 
+                        android:paddingBottom="10dp" 
+                        android:layout_width="match_parent" 
+                        android:layout_height="wrap_content">
+                        
+                        <LinearLayout 
+                            android:orientation="horizontal" 
+                            android:paddingRight="25dp" 
+                            android:layout_width="match_parent" 
+                            android:layout_height="wrap_content" 
+                            android:layout_weight="1.0">
+                            
+                            <com.onjyb.customview.ETechButton 
+                                android:gravity="center" 
+                                android:id="@+id/btnfinishWork" 
+                                android:text="@string/txt_finish_work" 
+                                style="@style/btn_style_red" />
+                            <com.onjyb.customview.ETechTextView 
+                                android:gravity="center" 
+                                android:layout_gravity="center" 
+                                android:id="@+id/tv_WorkHrs_end" 
+                                android:layout_width="match_parent" 
+                                android:layout_height="match_parent" 
+                                android:text="@string/txt_service_time_hrs1" 
+                                style="@style/tv_comman_gray" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:background="@color/dark_grey"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp" />
+
+                        <ImageButton
+                            android:layout_gravity="center"
+                            android:id="@+id/img_work_hrs_end"
+                            android:background="@color/White"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="25dp"
+                            android:src="@drawable/clock"
+                            android:scaleType="fitCenter" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.onjyb.customview.ETechTextView
+                    android:layout_marginTop="@dimen/view_margin"
+                    android:text="@string/txt_break_time"
+                    style="@style/tv_comman_gray_to_blue" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/ll_of_kms"
+                    android:background="@drawable/btn_rount_with_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:background="@drawable/btn_minus_corner"
+                        style="@style/btn_hrs_component" />
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+
+                        <Spinner android:gravity="center" android:id="@+id/breakTime_list"
+                            android:background="#00000000" android:paddingLeft="0dp"
+                            android:layout_width="match_parent" android:layout_height="40dp"
+                            android:drawSelectorOnTop="false" android:minHeight="45dp"
+                            android:dropDownWidth="match_parent" android:dropDownVerticalOffset="-15dp"
+                            android:spinnerMode="dropdown" />
+
+                    </LinearLayout>
+
+                    <Button android:background="@drawable/btn_plus_corner" style="@style/btn_hrs_component" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_ptobank"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="10dp">
+                    <ImageView
+                        android:id="@+id/iv_ptobank"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/selection_mark_off"/>
+                    <TextView
+                        style="@style/tv_comman_gray_to_blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_to_ptobank"
+                        android:layout_marginLeft="5dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/ll_of_overtime"
+                    android:background="@drawable/btn_rount_with_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/view_margin"
+                    android:layout_weight="1.0">
+
+                    <LinearLayout android:orientation="horizontal"
+                        android:id="@+id/ll_dropdon_overtime" android:background="@drawable/layout_up_round_corner"
+                        android:paddingLeft="@dimen/view_margin" android:paddingTop="10dp"
+                        android:paddingRight="@dimen/view_margin" android:paddingBottom="10dp"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:onClick="toggel_content">
+
+                        <com.onjyb.customview.ETechTextView
+                            android:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+                            android:id="@+id/tvbreaktime"
+                            android:layout_width="match_parent"
+                            android:text="@string/txt_over_time" android:layout_weight="1.0"
+                            style="@style/tv_comman_large_font" />
+
+                        <ImageButton android:id="@+id/down_arrow_img" android:background="@android:color/transparent"
+                            android:clickable="false"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:src="@drawable/drop_down_arrow_grey" android:tint="@color/Dark_blue" />
+
+                        <ImageButton android:id="@+id/up_arrow_img" android:background="@android:color/transparent"
+                            android:visibility="gone"
+                            android:clickable="false"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:src="@drawable/drop_up_arrow_grey" android:tint="@color/Dark_blue" />
+
+                    </LinearLayout>
+
+                    <LinearLayout android:orientation="vertical"
+                        android:id="@+id/ll_of_overtimeview"
+                        android:visibility="gone"
+                        android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                        <com.onjyb.customview.ETechTextView android:id="@+id/tvovettime1"
+                            android:paddingLeft="@dimen/view_margin" android:paddingTop="@dimen/view_margin"
+                            android:paddingRight="@dimen/view_margin" android:layout_width="match_parent"
+                            android:text="@string/txt_over_time1" style="@style/tv_comman" />
+
+                        <LinearLayout android:orientation="horizontal" android:visibility="gone"
+                            android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                            <com.onjyb.customview.ETechTextView
+                                android:paddingLeft="@dimen/view_margin" android:paddingRight="@dimen/view_margin"
+                                android:layout_width="match_parent" android:text="@string/Hrs"
+                                android:layout_weight="1.0" style="@style/tv_comman" />
+
+                            <com.onjyb.customview.ETechTextView
+                                android:paddingLeft="20dp" android:paddingRight="@dimen/view_margin"
+                                android:layout_width="match_parent" android:text="@string/Mins"
+                                android:layout_weight="1.0" style="@style/tv_comman" />
+
+                        </LinearLayout>
+
+                        <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/view_margin"
+                            android:paddingTop="5dp" android:paddingBottom="5dp"
+                            android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                            <RelativeLayout android:orientation="horizontal"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp" android:layout_weight="1.0">
+
+                                <ImageButton android:layout_gravity="center"
+                                    android:background="@android:color/transparent"
+                                    android:focusable="false"
+                                    android:layout_width="20dp" android:layout_height="20dp"
+                                    android:src="@drawable/clock" android:scaleType="fitCenter"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true" />
+
+                                <Spinner android:layout_gravity="center" android:id="@+id/spHalfHrsList"
+                                    android:background="#00000000"
+                                    android:layout_width="match_parent" android:layout_height="40dp"
+                                    android:drawSelectorOnTop="false" android:dropDownVerticalOffset="45dp"
+                                    android:spinnerMode="dropdown" />
+
+                            </RelativeLayout>
+
+                            <TextView android:background="@color/dark_grey"
+                                android:layout_width="1dp" android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp" android:layout_marginRight="15dp" />
+
+                            <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/view_margin" android:layout_weight="1.0">
+
+                                <ImageButton
+                                    android:layout_gravity="center" android:background="@color/White" android:focusable="false"
+                                    android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/clock" android:scaleType="fitCenter" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+
+                                <Spinner android:id="@+id/spHalfMinList" android:background="#00000000" android:paddingLeft="0dp"
+                                    android:layout_width="match_parent" android:layout_height="40dp" android:drawSelectorOnTop="false" android:minHeight="45dp" android:layout_centerInParent="true" android:dropDownWidth="match_parent" android:dropDownVerticalOffset="45dp" android:spinnerMode="dropdown" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <TextView android:background="@color/dark_grey"
+                            android:layout_width="match_parent" android:layout_height="1dp" />
+
+                        <com.onjyb.customview.ETechTextView android:id="@+id/tvovettime2"
+                            android:paddingLeft="@dimen/view_margin" android:paddingTop="@dimen/view_margin" android:paddingRight="@dimen/view_margin"
+                            android:layout_width="match_parent" android:text="@string/txt_over_time2" style="@style/tv_comman" />
+
+                        <LinearLayout android:orientation="horizontal" android:visibility="gone"
+                            android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                            <com.onjyb.customview.ETechTextView android:paddingLeft="@dimen/view_margin" android:paddingRight="@dimen/view_margin"
+                                android:layout_width="match_parent" android:text="@string/Hrs" android:layout_weight="1.0" style="@style/tv_comman" />
+
+                            <com.onjyb.customview.ETechTextView android:paddingLeft="20dp" android:paddingRight="@dimen/view_margin"
+                                android:layout_width="match_parent" android:text="@string/Mins" android:layout_weight="1.0" style="@style/tv_comman" />
+
+                        </LinearLayout>
+
+                        <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/view_margin"
+                            android:paddingTop="5dp" android:paddingBottom="5dp"
+                            android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                            <RelativeLayout android:orientation="horizontal"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp" android:layout_weight="1.0">
+
+                                <com.onjyb.customview.ETechTextView android:gravity="center"
+                                    android:id="@+id/tvovettime1starttext" android:visibility="gone"
+                                    android:layout_width="wrap_content" android:layout_height="match_parent"
+                                    android:layout_weight="1.0" style="@style/tv_comman_gray" />
+
+                                <ImageButton android:layout_gravity="center"
+                                    android:id="@+id/img_overtime_hrs_start" android:background="@color/White"
+                                    android:focusable="false" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/clock" android:scaleType="fitCenter" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+
+                                <Spinner android:layout_gravity="center" android:id="@+id/spfullHrsList"
+                                    android:background="#00000000"
+                                    android:layout_width="match_parent" android:layout_height="40dp" android:drawSelectorOnTop="false" android:dropDownVerticalOffset="45dp" android:spinnerMode="dropdown" />
+
+                            </RelativeLayout>
+
+                            <TextView android:background="@color/dark_grey" android:layout_width="1dp" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="15dp" />
+
+                            <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/view_margin" android:layout_weight="1.0">
+
+                                <ImageButton android:layout_gravity="center" android:id="@+id/imgworkendovertime2Clock"
+                                    android:background="@color/White" android:focusable="false"
+                                    android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/clock" android:scaleType="fitCenter" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+
+                                <Spinner android:id="@+id/spfullMinList"
+                                    android:background="#00000000" android:paddingLeft="0dp"
+                                    android:layout_width="match_parent" android:layout_height="40dp"
+                                    android:drawSelectorOnTop="false" android:minHeight="45dp"
+                                    android:layout_centerInParent="true" android:dropDownWidth="match_parent"
+                                    android:dropDownVerticalOffset="45dp" android:spinnerMode="dropdown" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.onjyb.customview.ETechTextView android:layout_marginTop="@dimen/view_margin" android:text="@string/txt_km_drive" style="@style/tv_comman_gray_to_blue" />
+
+                <RelativeLayout android:orientation="horizontal" android:id="@+id/ll_of_break_hrs" android:background="@drawable/btn_rount_with_border"
+                    android:layout_width="match_parent" android:layout_height="40dp">
+
+                    <Button android:id="@+id/btn1" android:background="@drawable/btn_minus_corner"
+                        style="@style/btn_hrs_component1" />
+
+                    <LinearLayout android:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+                        android:orientation="horizontal" android:id="@+id/ll_of_km"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_weight="1.0" android:layout_toRightOf="@+id/btn1" android:layout_centerVertical="true">
+
+
+                        <EditText
+                            android:id="@+id/km_list"
+                            style="@style/tv_comman_gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:gravity="right|center_vertical"
+                            android:hint="00"
+                            android:inputType="number" />
+
+                        <com.onjyb.customview.ETechTextView
+                            android:gravity="left|center_vertical"
+                            android:id="@+id/tv_km_name"
+                            android:layout_width="match_parent" android:layout_height="match_parent"
+                            android:text="@string/km" android:layout_weight="1.0" style="@style/tv_comman_gray" />
+
+                    </LinearLayout>
+
+                    <Button android:background="@drawable/btn_plus_corner" android:layout_alignParentRight="true" style="@style/btn_hrs_component1" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout android:gravity="center"
+                android:orientation="horizontal" android:id="@+id/imgbtnaddservice1" android:background="@drawable/btn_bg_login_border"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" android:layout_marginLeft="15dp" android:layout_marginTop="@dimen/view_margin" android:layout_marginRight="15dp" android:layout_marginBottom="5dp">
+
+                <com.onjyb.customview.ETechTextView
+                    android:layout_width="wrap_content" android:layout_marginLeft="5dp"
+                    android:text="@string/txt_add_extra_service" style="@style/tv_comman_white" />
+
+                <ImageButton android:layout_gravity="center" android:id="@+id/imgbtnaddservice" android:background="@android:color/transparent"
+                    android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="3dp" android:src="@drawable/arrowclear" android:scaleType="fitCenter" android:layout_alignParentRight="true" />
+
+            </LinearLayout>
+
+            <TextView android:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+                android:id="@+id/txtnoextraService" android:background="@drawable/btn_rount_with_border" android:paddingLeft="10dp"
+                android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp" android:layout_marginRight="15dp" android:text="@string/no_extra_service_add" style="@style/tv_comman_gray" />
+
+            <ListView android:id="@+id/lsasservice" android:visibility="gone"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp" android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp" android:divider="@android:color/transparent" android:dividerHeight="5dp" />
+
+            <TextView android:layout_marginLeft="15dp" android:layout_marginTop="@dimen/view_margin" android:layout_marginRight="15dp"
+                android:text="@string/txt_attachment" style="@style/tv_comman_gray_to_blue" />
+
+            <com.onjyb.customview.ImageSelectionView android:id="@+id/imgselectionView2"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp" android:layout_marginTop="@dimen/view_margin" android:layout_marginRight="15dp" />
+
+            <com.onjyb.customview.ETechTextView android:id="@+id/tvcommentmanager" android:visibility="gone"
+                android:layout_marginLeft="15dp" android:layout_marginTop="@dimen/view_margin" android:layout_marginRight="15dp"
+                android:text="@string/managernote" style="@style/tv_comman_gray_to_blue" />
+
+            <TextView android:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+                android:id="@+id/txtNomngcomments" android:background="@drawable/btn_round_corner"
+                android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp" android:layout_marginTop="2dp" android:layout_marginRight="15dp"
+                android:text="@string/no_comments" style="@style/tv_comman_gray" />
+
+            <com.onjyb.customview.ETechTextView android:gravity="center" android:id="@+id/tvmngrejcetcomments"
+                android:visibility="gone" android:layout_width="match_parent" android:layout_marginLeft="15dp"
+                android:layout_marginTop="2dp" android:layout_marginRight="15dp" style="@style/tv_leave_grey" />
+
+            <com.onjyb.customview.ETechTextView
+                android:id="@+id/tvcomment"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="@dimen/view_margin"
+                android:layout_marginRight="15dp"
+                android:text="@string/comments"
+                style="@style/tv_comman_gray_to_blue" />
+
+            <com.onjyb.customview.ETechEditText android:id="@+id/edtcomment" android:background="@drawable/btn_rount_with_border"
+                android:layout_marginLeft="15dp" android:layout_marginRight="15dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="15dp" style="@style/tv_comments" />
+
+            <Button
+                android:id="@+id/btnsign"
+                style="@style/btn_style"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/tv_signinghours"
+                android:textAllCaps="false" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@color/light_grey"
+                android:paddingLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout android:orientation="vertical" android:id="@+id/ll_parenttextview"
+                    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                    <com.onjyb.customview.ETechTextView android:textSize="18sp"
+                        android:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+                        android:layout_marginTop="15dp" android:text="@string/txt_total_over_time"
+                        android:layout_weight="1.0" style="@style/tv_comman_gray_to_blue" />
+
+                    <LinearLayout android:orientation="horizontal"
+                        android:id="@+id/ll_50_overtime" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+
+                        <com.onjyb.customview.ETechTextView android:text="@string/tv_50_overtime" android:layout_weight="1.0" style="@style/lbl_total_time_grey" />
+
+                        <LinearLayout android:orientation="horizontal" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+                            <com.onjyb.customview.ETechTextView android:id="@+id/tvtotaltimehrsovertm" android:text="@string/txt_initial_time_hrs" style="@style/lbl_total_time" />
+
+                            <TextView android:background="@color/green" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" />
+
+                            <com.onjyb.customview.ETechTextView android:id="@+id/tvtotaltimeminsovertm" android:text="@string/txt_initial_time_min" style="@style/lbl_total_time" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/ll_100_overtime" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+
+                        <com.onjyb.customview.ETechTextView android:text="@string/tv_100_overtime" android:layout_weight="1.0" style="@style/lbl_total_time_grey" />
+
+                        <LinearLayout android:orientation="horizontal" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+                            <com.onjyb.customview.ETechTextView android:id="@+id/tvtotaltimehrsovertmfull" android:text="@string/txt_initial_time_hrs" style="@style/lbl_total_time" />
+
+                            <TextView android:background="@color/green" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" />
+
+                            <com.onjyb.customview.ETechTextView android:id="@+id/tvtotaltimeminsovertmfull" android:text="@string/txt_initial_time_min" style="@style/lbl_total_time" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout android:orientation="vertical" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                    <com.onjyb.customview.ETechTextView android:textSize="18sp"
+                        android:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+                        android:layout_marginTop="5dp" android:text="@string/txt_total_time" android:layout_weight="1.0" style="@style/tv_comman_gray_to_blue" />
+
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                        <com.onjyb.customview.ETechTextView android:id="@+id/tvhrs" android:text="@string/without_overtime"
+                            android:layout_weight="1.0" style="@style/lbl_total_time_grey" />
+
+                        <LinearLayout android:orientation="horizontal" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+                            <com.onjyb.customview.ETechTextView android:id="@+id/tvtotaltimehrs" android:text="@string/txt_initial_time_hrs" style="@style/lbl_total_time" />
+
+                            <TextView android:background="@color/green" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" />
+
+                            <com.onjyb.customview.ETechTextView android:id="@+id/tvtotaltimemins" android:text="@string/txt_initial_time_min" style="@style/lbl_total_time" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.onjyb.customview.ETechButton android:gravity="center" android:id="@+id/btnsave"
+                android:layout_marginLeft="15dp" android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp" android:layout_marginBottom="25dp"
+                android:text="@string/save" android:singleLine="true" style="@style/btn_style" />
+
+        </LinearLayout>
+
+    </ScrollView>
+    
+    <LinearLayout 
+        android:orientation="vertical" 
+        android:background="@color/light_grey" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="2dp" /> 
+    
+
+</LinearLayout>

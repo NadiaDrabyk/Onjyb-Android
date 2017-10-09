@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp">
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp">
+        <com.onjyb.customview.ETechTextView
+            android:id="@+id/tvpronono"
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            style="@style/tv_comman"
+            android:layout_weight="1"/>
+        <com.onjyb.customview.ETechTextView
+            android:layout_weight="3.5"
+            android:id="@+id/tvproname"
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            style="@style/tv_comman" />
+        <com.onjyb.customview.ETechTextView
+            android:layout_weight="2.8"
+            android:id="@+id/tvdatehome" android:layout_width="0dp" android:layout_height="wrap_content" style="@style/tv_comman" />
+        <com.onjyb.customview.ETechTextView
+            android:layout_weight="2.2"
+            android:id="@+id/tvhours" android:layout_width="0dp" android:layout_height="wrap_content" style="@style/tv_comman" />
+        <com.onjyb.customview.ETechTextView
+            android:layout_weight="1.5"             android:gravity="center|center_vertical"
+            android:id="@+id/tvKmhome" android:layout_width="0dp" android:layout_height="wrap_content" style="@style/tv_comman" />
+        <ImageButton android:id="@+id/imgvforarrow" android:visibility="gone"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView android:id="@+id/tvnoworksheet" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/txt_no_data" />
+</LinearLayout>

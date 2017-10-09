@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="15"
+    android:versionName="2.2"
+    package="com.onjyb">
+
+    <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <action android:name="android.intent.action.PHONE_STATE" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@drawable/icon" android:name=".OnjybApp" android:allowBackup="false">
+        <activity android:theme="@style/AppTheme" android:label="@string/app_name" android:name=".layout.SplashActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_login"
+            android:name=".layout.LoginActivity" android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_home_activity_e" android:name=".layout.EmpHomeActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustPan|adjustNothing" />
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_register_time" android:name=".layout.RegisterTimeActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_forgotpassword" android:name=".layout.ForgotPasswordActivity" android:launchMode="singleTop" android:screenOrientation="portrait" />
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_extra_service" android:name=".layout.ExtraServiceActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_statistik" android:name=".layout.StatistikActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_my_task" android:name=".layout.MyTaskActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_about_app" android:name=".layout.AboutAppActivity" android:launchMode="singleTop" android:screenOrientation="portrait" />
+        <service android:name=".layout.ImageUploadService" />
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_display_my_task_detail" android:name=".layout.DisplayMyTaskDetailActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_display_images" android:name=".helper.SlideShowActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_all_status_task" android:name=".layout.AllStatusTaskActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_profile" android:name=".layout.ProfileActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_leave_form" android:name=".layout.LeaveFormActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|stateAlwaysHidden|adjustResize" />
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_leave_lising" android:name=".layout.LeaveLisingActivity" android:launchMode="singleTop" android:screenOrientation="portrait" />
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_manger_leave_list" android:name=".layout.MangerLeaveListActivity" android:launchMode="singleTop" android:screenOrientation="portrait" />
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_manger_leave_list" android:name=".layout.PhotoCropActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_group_chat" android:name=".layout.GroupChatActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_extra_service_display" android:name=".layout.ExtraServiceDisplay" android:screenOrientation="portrait" />
+        <receiver android:name=".helper.MyBroadcastReceiver" android:enabled="true" />
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_leave_display" android:name=".layout.LeaveDisplay" android:launchMode="singleTop" android:screenOrientation="portrait" />
+        <service android:name=".receiver.RegistrationIntentService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <receiver android:name=".receiver.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/title_activity_update_available" android:name=".layout.UpdateAvailableActivity" android:launchMode="singleTop" android:screenOrientation="portrait" />
+        <service android:name=".helper.ReconnectionService" />
+        <service android:name=".helper.NotificationJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true" />
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+        <provider android:name="com.google.android.gms.measurement.AppMeasurementContentProvider" android:exported="false" android:authorities="com.onjyb.google_measurement_service" />
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false" />
+    </application>
+</manifest>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="30dp"
+    >
+    <TextView
+        android:id="@+id/tv_projectid"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:textColor="#2b5e93"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="1"/>
+    <TextView
+        android:id="@+id/tv_projectname"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="match_parent"
+        android:textColor="#2b5e93"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="# Project"/>
+
+    <TextView
+        android:id="@+id/tv_activitydate"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:textColor="#2b5e93"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:text="Date"
+        />
+
+    <TextView
+        android:id="@+id/tv_activityhrs"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:textColor="#2b5e93"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="Hrs."/>
+    <TextView
+        android:id="@+id/tv_activitykm"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:textColor="#2b5e93"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="Km."/>
+
+</LinearLayout>

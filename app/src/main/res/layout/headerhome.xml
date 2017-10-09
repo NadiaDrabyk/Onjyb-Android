@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="0dp">
+    <com.onjyb.customview.ETechTextView
+        android:id="@+id/tvActivity"
+        android:background="@color/Dark_blue1"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_heading"
+        android:gravity="center"
+        style="@style/tv_comman_white" />
+
+    <LinearLayout android:background="@color/black"
+        android:paddingTop="5dp" android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.onjyb.customview.ETechTextView
+            android:id="@+id/tvpronono" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:text="@string/hash_txt" style="@style/tv_comman_white"
+            android:layout_weight="1"/>
+        <com.onjyb.customview.ETechTextView
+            android:layout_weight="3.5"
+            android:id="@+id/tvproname" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:text="@string/projectname" style="@style/tv_comman_white" />
+        <com.onjyb.customview.ETechTextView
+            android:layout_weight="2.8"
+            android:id="@+id/tvdatehome" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:text="@string/Date" style="@style/tv_comman_white" />
+        <com.onjyb.customview.ETechTextView
+            android:layout_weight="2.2"
+            android:id="@+id/tvhours" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:text="@string/tv_hours" style="@style/tv_comman_white" />
+        <com.onjyb.customview.ETechTextView
+            android:id="@+id/tvKmhome" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:text="@string/tv_Km" style="@style/tv_comman_white"
+            android:layout_weight="1.5"
+            android:gravity="center|center_vertical"
+        />
+    </LinearLayout>
+</LinearLayout>
